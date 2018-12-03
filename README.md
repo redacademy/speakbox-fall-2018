@@ -64,3 +64,9 @@ react-native run-android
 - Julia Browne [https://github.com/juliabrowne](https://github.com/juliabrowne)
 - Devin Juett [https://github.com/Juett](https://github.com/Juett)
 - Einer Lim [https://github.com/elim322](https://github.com/elim322)
+
+## Technologies Used
+
+Front End:
+
+- React Native
