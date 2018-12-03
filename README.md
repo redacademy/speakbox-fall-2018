@@ -2,6 +2,12 @@
 
 Wiki: [Simplified GIT Workflow](https://github.com/redacademy/speakbox-fall-2018/wiki/Simplified-GIT-Workflow)
 
+
+# Description
+
+Speakbox is an app that focuses on allowing users to "live mentally, physically and socially well" through the use of science-proven tools and activities. Features include a mood board, a private journal, suggested activities, and a community forum where users can ask and answer questions related to mental health.
+
+
 # Installation
 
 Install Prerequisites in home directory and install Dependencies from the inside project directory:
