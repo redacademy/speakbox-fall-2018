@@ -2,11 +2,9 @@
 
 Wiki: [Simplified GIT Workflow](https://github.com/redacademy/speakbox-fall-2018/wiki/Simplified-GIT-Workflow)
 
-
 # Description
 
 Speakbox is an app that focuses on allowing users to "live mentally, physically and socially well" through the use of science-proven tools and activities. Features include a mood board, a private journal, suggested activities, and a community forum where users can ask and answer questions related to mental health.
-
 
 # Installation
 
@@ -59,3 +57,10 @@ Then
 ```bash
 react-native run-android
 ```
+
+## Authors
+
+- A.J. Aguasin [https://github.com/ajaguasin](https://github.com/ajaguasin)
+- Julia Browne [https://github.com/juliabrowne](https://github.com/juliabrowne)
+- Devin Juett [https://github.com/Juett](https://github.com/Juett)
+- Einer Lim [https://github.com/elim322](https://github.com/elim322)
