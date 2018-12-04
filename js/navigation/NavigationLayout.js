@@ -1,5 +1,6 @@
 import React from "react";
 import Account from "../screens/Account/Account";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import ActivityScreen from "../screens/Activity/Activity";
 import CommunityScreen from "../screens/Community/Community";
 import JournalScreen from "../screens/Journal/Journal";
@@ -67,13 +68,13 @@ export default createBottomTabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === "Activity") {
-          iconName = `ios-information-circle`;
+          iconName = `ios-body`;
         } else if (routeName === "Community") {
-          iconName = `ios-map`;
+          iconName = `ios-contacts`;
         } else if (routeName === "Journal") {
-          iconName = `ios-calendar`;
+          iconName = `ios-journal`;
         } else if (routeName === "DashBoard") {
-          iconName = `ios-heart`;
+          iconName = `ios-clipboard`;
         }
         return (
           <Ionicons
@@ -85,13 +86,13 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "white",
+      activeTintColor: "black",
       inactiveTintColor: "#999",
       labelStyle: {
         fontSize: 10
       },
       style: {
-        backgroundColor: "black"
+        backgroundColor: "white"
       }
     }
   }
