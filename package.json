@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "final-form": "^4.11.0",
+    "react": "^16.6.3",
     "react-final-form": "^4.0.2",
     "react-native": "0.57.7",
     "react-native-gesture-handler": "^1.0.10",
