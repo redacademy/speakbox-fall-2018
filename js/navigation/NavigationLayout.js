@@ -1,16 +1,18 @@
 import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import Account from "../screens/Account/Account";
+import ActivityScreen from "../screens/Activity/Activity";
+import CommunityScreen from "../screens/Community/Community";
+import JournalScreen from "../screens/Journal/Journal";
+import DashBoardScreen from "../screens/Dashboard/Dashboard";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
   createBottomTabNavigator
 } from "react-navigation";
 
-const ScheduleStack = createStackNavigator(
+const ActivityStack = createStackNavigator(
   {
-    Schedule: ScheduleScreen,
-    Session: SessionScreen,
-    Speaker: SpeakerScreen
+    Activity: ActivityScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -18,9 +20,9 @@ const ScheduleStack = createStackNavigator(
     })
   }
 );
-const MapStack = createStackNavigator(
+const CommunityStack = createStackNavigator(
   {
-    Map: MapScreen
+    Community: CommunityScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -28,10 +30,9 @@ const MapStack = createStackNavigator(
     })
   }
 );
-const FavesStack = createStackNavigator(
+const JournalStack = createStackNavigator(
   {
-    Faves: FavesScreen,
-    Session: SessionScreen
+    Journal: JournalScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -39,9 +40,9 @@ const FavesStack = createStackNavigator(
     })
   }
 );
-const AboutStack = createStackNavigator(
+const DashBoardStack = createStackNavigator(
   {
-    About: AboutScreen
+    DashBoard: DashBoardScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -52,26 +53,26 @@ const AboutStack = createStackNavigator(
 
 export default createBottomTabNavigator(
   {
-    Schedule: ScheduleStack,
+    Activity: ActivityStack,
 
-    Faves: FavesStack,
+    Community: CommunityStack,
 
-    Map: MapStack,
+    Journal: JournalStack,
 
-    About: AboutStack
+    DashBoard: DashBoardStack
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
-        if (routeName === "About") {
+        if (routeName === "Activity") {
           iconName = `ios-information-circle`;
-        } else if (routeName === "Map") {
+        } else if (routeName === "Community") {
           iconName = `ios-map`;
-        } else if (routeName === "Schedule") {
+        } else if (routeName === "Journal") {
           iconName = `ios-calendar`;
-        } else if (routeName === "Faves") {
+        } else if (routeName === "DashBoard") {
           iconName = `ios-heart`;
         }
         return (
