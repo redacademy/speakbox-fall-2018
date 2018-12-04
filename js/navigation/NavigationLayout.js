@@ -1,5 +1,4 @@
 import React from "react";
-import Account from "../screens/Account/Account";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ActivityScreen from "../screens/Activity/Activity";
 import CommunityScreen from "../screens/Community/Community";
@@ -88,6 +87,7 @@ export default createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "black",
       inactiveTintColor: "#999",
+      showLabel: false,
       labelStyle: {
         fontSize: 10
       },
