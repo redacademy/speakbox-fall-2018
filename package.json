@@ -12,6 +12,7 @@
     "react": "16.6.1",
     "react-final-form": "^4.0.2",
     "react-native": "0.57.7",
+    "react-native-linear-gradient": "^2.5.3",
     "react-navigation": "^3.0.5"
   },
   "devDependencies": {
