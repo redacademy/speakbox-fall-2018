@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Text, View } from "react-native";
 
 const Dashboard = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <View>
+      <Text>Dashboard</Text>
+    </View>
   );
 };
 

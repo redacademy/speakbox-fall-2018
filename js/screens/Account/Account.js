@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Text, View } from "react-native";
 
 const Account = () => {
   return (
-    <div>
-      <h1>Account</h1>
-    </div>
+    <View>
+      <Text>Account</Text>
+    </View>
   );
 };
 

@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Text, View } from "react-native";
 
 const Profile = () => {
   return (
-    <div>
-      <h1>Profile</h1>
-    </div>
+    <View>
+      <Text>Profile</Text>
+    </View>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Text, View } from "react-native";
 const MoodCheck = () => {
   return (
-    <div>
-      <h1>MoodCheck</h1>
-    </div>
+    <View>
+      <Text>MoodCheck</Text>
+    </View>
   );
 };
 
