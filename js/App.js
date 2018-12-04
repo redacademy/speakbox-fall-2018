@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+import AppNavigator from "./navigation/RootStackNavigator";
 
 export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hello World</Text>
-      </View>
-    );
+    return <AppNavigator />;
   }
 }
 
