@@ -10,11 +10,14 @@
     "async-react": "^1.0.7",
     "final-form": "^4.11.0",
     "react": "16.6.1",
+    "react-dom": "^16.6.3",
     "react-final-form": "^4.0.2",
     "react-native": "0.57.7",
+    "react-native-gesture-handler": "^1.0.10",
     "react-native-linear-gradient": "^2.5.3",
     "react-native-vector-icons": "^6.1.0",
-    "react-navigation": "^3.0.5"
+    "react-navigation": "^3.0.5",
+    "realm": "2.19.1"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
