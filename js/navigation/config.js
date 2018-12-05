@@ -3,6 +3,8 @@ import { Image, View } from "react-native";
 import { Header } from "react-navigation";
 import styles from "./styles";
 
+Header.HEIGHT;
+
 export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <Header {...props} />,
