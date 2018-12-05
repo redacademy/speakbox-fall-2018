@@ -1,8 +1,8 @@
 import React from "react";
-import ActivityScreen from "../screens/Activity/Activity";
-import CommunityScreen from "../screens/Community/Community";
-import JournalScreen from "../screens/Journal/Journal";
-import DashBoardScreen from "../screens/Dashboard/Dashboard";
+import ActivityScreen from "../screens/Activity";
+import CommunityScreen from "../screens/Community";
+import JournalScreen from "../screens/Journal";
+import DashBoardScreen from "../screens/Dashboard";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,

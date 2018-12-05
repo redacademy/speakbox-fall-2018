@@ -7,7 +7,7 @@ export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <Header {...props} />,
 
-  headerTitle: (
+  headerRight: (
     <View style={styles.header}>
       <Image
         style={styles.profileIcon}
