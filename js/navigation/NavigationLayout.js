@@ -3,6 +3,8 @@ import ActivityScreen from "../screens/Activity/Activity";
 import CommunityScreen from "../screens/Community/Community";
 import JournalScreen from "../screens/Journal/Journal";
 import DashBoardScreen from "../screens/Dashboard/Dashboard";
+import ProfileScreen from "../screens/Profile/Profile";
+import EditProfileScreen from "../screens/EditProfile/EditProfile";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -11,9 +13,32 @@ import {
 import { Image } from "react-native";
 import styles from "./styles";
 
+const ProfileStack = createStackNavigator(
+  {
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const EditProfileStack = createStackNavigator(
+  {
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 const ActivityStack = createStackNavigator(
   {
-    Activity: ActivityScreen
+    Activity: ActivityScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -23,7 +48,9 @@ const ActivityStack = createStackNavigator(
 );
 const CommunityStack = createStackNavigator(
   {
-    Community: CommunityScreen
+    Community: CommunityScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -33,7 +60,9 @@ const CommunityStack = createStackNavigator(
 );
 const JournalStack = createStackNavigator(
   {
-    Journal: JournalScreen
+    Journal: JournalScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -43,7 +72,9 @@ const JournalStack = createStackNavigator(
 );
 const DashBoardStack = createStackNavigator(
   {
-    DashBoard: DashBoardScreen
+    DashBoard: DashBoardScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
