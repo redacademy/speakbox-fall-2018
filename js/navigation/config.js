@@ -1,18 +1,22 @@
 import React from "react";
-import { Text } from "react-native";
+import { Image, View } from "react-native";
 import { Header } from "react-navigation";
+import styles from "./styles";
 
 export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <Header {...props} />,
 
   headerTitle: (
-    <Text style={{ height: "100%", width: "50%", marginBottom: 10 }}>
-      hello
-    </Text>
+    <View style={styles.header}>
+      <Image
+        style={styles.profileIcon}
+        source={require("../assets/Icons/profile-photo-icon.png")}
+      />
+    </View>
   ),
 
   headerStyle: {
-    backgroundColor: "black"
+    borderBottomColor: "transparent"
   }
 });

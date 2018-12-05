@@ -1,6 +1,4 @@
 import React from "react";
-import Account from "../screens/Account/Account";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import ActivityScreen from "../screens/Activity/Activity";
 import CommunityScreen from "../screens/Community/Community";
 import JournalScreen from "../screens/Journal/Journal";
@@ -10,6 +8,8 @@ import {
   createStackNavigator,
   createBottomTabNavigator
 } from "react-navigation";
+import { Image } from "react-native";
+import styles from "./styles";
 
 const ActivityStack = createStackNavigator(
   {
@@ -54,40 +54,35 @@ const DashBoardStack = createStackNavigator(
 
 export default createBottomTabNavigator(
   {
-    Activity: ActivityStack,
-
-    Community: CommunityStack,
+    DashBoard: DashBoardStack,
 
     Journal: JournalStack,
 
-    DashBoard: DashBoardStack
+    Activity: ActivityStack,
+
+    Community: CommunityStack
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ horizontal, tintColor }) => {
         const { routeName } = navigation.state;
-        let iconName;
+        let image;
         if (routeName === "Activity") {
-          iconName = `ios-body`;
+          image = require("../assets/Icons/basketball-ball.png");
         } else if (routeName === "Community") {
-          iconName = `ios-contacts`;
+          image = require("../assets/Icons/user-friends.png");
         } else if (routeName === "Journal") {
-          iconName = `ios-journal`;
+          image = require("../assets/Icons/book-open.png");
         } else if (routeName === "DashBoard") {
-          iconName = `ios-clipboard`;
+          image = require("../assets/Icons/analytics.png");
         }
-        return (
-          <Ionicons
-            name={iconName}
-            size={horizontal ? 25 : 25}
-            color={tintColor}
-          />
-        );
+        return <Image style={styles.navIcons} source={image} />;
       }
     }),
     tabBarOptions: {
       activeTintColor: "black",
       inactiveTintColor: "#999",
+      showLabel: false,
       labelStyle: {
         fontSize: 10
       },

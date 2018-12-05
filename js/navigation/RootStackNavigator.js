@@ -1,13 +1,13 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import NavigationLayout from './NavigationLayout';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import NavigationLayout from "./NavigationLayout";
 
 const AppNavigator = createStackNavigator(
   {
-    Navlayout: NavigationLayout,
+    Navlayout: NavigationLayout
   },
   {
-    headerMode: 'none',
-  },
+    headerMode: "none"
+  }
 );
 
 export default createAppContainer(AppNavigator);
