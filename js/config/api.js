@@ -1,4 +1,6 @@
-const getAPI = (url, headerConfig) => {
+import React, { Component } from 'react'
+
+const getAPI = (path, headerConfig) => {
   const baseURL = 'https://api.speakbox-staging.ca/api'
   const defaultHeaderOptions = {
     Accept: 'application/json',
