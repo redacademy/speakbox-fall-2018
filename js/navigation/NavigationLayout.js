@@ -1,8 +1,8 @@
 import React from "react";
-import ActivityScreen from "../screens/Activity/Activity";
-import CommunityScreen from "../screens/Community/Community";
-import JournalScreen from "../screens/Journal/Journal";
-import DashBoardScreen from "../screens/Dashboard/Dashboard";
+import ActivityScreen from "../screens/Activity";
+import CommunityScreen from "../screens/Community";
+import JournalScreen from "../screens/Journal";
+import DashBoardScreen from "../screens/Dashboard";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -11,6 +11,8 @@ import {
 import { Image } from "react-native";
 import styles from "./styles";
 
+import CommunityCategoryScreen from "../screens/CommunityCategory";
+import CommunityQuestionScreen from "../screens/CommunityQuestion";
 const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen
@@ -23,8 +25,11 @@ const ActivityStack = createStackNavigator(
 );
 const CommunityStack = createStackNavigator(
   {
-    Community: CommunityScreen
+    Community: CommunityScreen,
+    CommunityCategory: CommunityCategoryScreen,
+    CommunityQuestion: CommunityQuestionScreen
   },
+
   {
     defaultNavigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
