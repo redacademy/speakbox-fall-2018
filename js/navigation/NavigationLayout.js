@@ -80,8 +80,7 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "black",
-      inactiveTintColor: "#999",
+      activeBackgroundColor: "#efefef",
       showLabel: false,
       labelStyle: {
         fontSize: 10

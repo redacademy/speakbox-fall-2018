@@ -5,15 +5,15 @@ const styles = StyleSheet.create({
     borderBottomColor: "white"
   },
   profileIcon: {
-    width: Dimensions.get("window").width / 8,
-    height: Dimensions.get("window").height / 8,
+    width: Dimensions.get("window").width / 9,
+    height: Dimensions.get("window").height / 9,
     resizeMode: "center",
     alignSelf: "flex-end",
     marginRight: 10
   },
   navIcons: {
-    width: Dimensions.get("window").width / 12,
-    height: Dimensions.get("window").height / 12,
+    width: Dimensions.get("window").width / 13,
+    height: Dimensions.get("window").height / 13,
     resizeMode: "center"
   }
 });

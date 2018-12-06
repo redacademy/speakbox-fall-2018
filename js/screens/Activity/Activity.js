@@ -21,23 +21,23 @@ const Activity = () => {
             <ScrollView style={styles.carousel} horizontal={true}>
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
             </ScrollView>
             <View style={styles.sectionTitle}>
@@ -46,23 +46,23 @@ const Activity = () => {
             <ScrollView style={styles.carousel} horizontal={true}>
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
             </ScrollView>
             <View style={styles.sectionTitle}>
@@ -71,23 +71,23 @@ const Activity = () => {
             <ScrollView style={styles.carousel} horizontal={true}>
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-blue.png")}
+                source={require("../../assets/Placeholder/placeholder-blue.png")}
               />
               <Image
                 style={styles.image}
-                source={require("../../assets/placeholder-red.png")}
+                source={require("../../assets/Placeholder/placeholder-red.png")}
               />
             </ScrollView>
           </View>
