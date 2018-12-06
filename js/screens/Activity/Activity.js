@@ -14,81 +14,83 @@ const Activity = () => {
           <View style={styles.pickActivity}>
             <Text style={styles.title}>Pick an Activity</Text>
           </View>
-          <View style={styles.sectionTitle}>
-            <Text style={styles.theme}>Mind</Text>
+          <View>
+            <View style={styles.sectionTitle}>
+              <Text style={styles.theme}>Mind</Text>
+            </View>
+            <ScrollView style={styles.carousel} horizontal={true}>
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+            </ScrollView>
+            <View style={styles.sectionTitle}>
+              <Text style={styles.theme}>Body</Text>
+            </View>
+            <ScrollView style={styles.carousel} horizontal={true}>
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+            </ScrollView>
+            <View style={styles.sectionTitle}>
+              <Text style={styles.theme}>Social</Text>
+            </View>
+            <ScrollView style={styles.carousel} horizontal={true}>
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-blue.png")}
+              />
+              <Image
+                style={styles.image}
+                source={require("../../assets/placeholder-red.png")}
+              />
+            </ScrollView>
           </View>
-          <ScrollView style={styles.carousel} horizontal={true}>
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-          </ScrollView>
-          <View style={styles.sectionTitle}>
-            <Text style={styles.theme}>Body</Text>
-          </View>
-          <ScrollView style={styles.carousel} horizontal={true}>
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-          </ScrollView>
-          <View style={styles.sectionTitle}>
-            <Text style={styles.theme}>Social</Text>
-          </View>
-          <ScrollView style={styles.carousel} horizontal={true}>
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/placeholder-red.png")}
-            />
-          </ScrollView>
         </View>
       </ScrollView>
     </ImageBackground>

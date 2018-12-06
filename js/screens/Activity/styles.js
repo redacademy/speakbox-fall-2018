@@ -1,16 +1,17 @@
 import { StyleSheet, Dimensions } from "react-native";
 const styles = StyleSheet.create({
   background: {
-    width: "100%",
-    height: "100%"
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height
   },
   container: {
     flex: 1,
-    marginTop: 100
+    justifyContent: "space-evenly",
+    height: Dimensions.get("window").height * 1.02
   },
   pickActivity: {
     alignSelf: "center",
-    marginBottom: 125
+    marginBottom: 30
   },
   title: {
     fontSize: 35
