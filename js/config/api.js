@@ -8,7 +8,7 @@ const getAPI = (url, headerConfig) => {
     ...headerConfig,
     headers: { ...headerConfig.headers, ...defaultHeaderOptions }
   }
-  return fetch(baseURL + Path2D, headerOptions)
+  return fetch(baseURL + path, headerOptions)
     .then(res => res.json())
     .then(res => res)
     .catch(e => e)
