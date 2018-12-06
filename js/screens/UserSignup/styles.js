@@ -6,8 +6,11 @@ const styles = StyleSheet.create({
     flex: 1,
     height,
     width,
-    justifyContent: 'center',
-    backgroundColor: '#BBDED6'
+    justifyContent: 'center'
+  },
+  background: {
+    height,
+    width
   },
   logoImage: {
     height: 80,
@@ -24,6 +27,7 @@ const styles = StyleSheet.create({
   },
   usernameInput: {
     justifyContent: 'flex-start',
+    backgroundColor: '#FFFF',
     borderWidth: 1,
     paddingTop: 12,
     paddingBottom: 12,
@@ -41,6 +45,7 @@ const styles = StyleSheet.create({
   },
   passwordInput: {
     justifyContent: 'flex-start',
+    backgroundColor: '#FFFF',
     borderWidth: 1,
     paddingTop: 12,
     paddingBottom: 12,
@@ -55,14 +60,9 @@ const styles = StyleSheet.create({
     shadowColor: '#B5ADAD',
     shadowOffset: { height: 1, width: 1 }
   },
-  forgotPassword: {
-    color: '#B5ADAD',
-    alignSelf: 'center',
-    marginBottom: 30
-  },
   button: {
     color: 'white',
-    backgroundColor: '#FFB5BA',
+    backgroundColor: '#4BBCF4',
     borderRadius: 30,
     marginLeft: 80,
     marginRight: 80,
@@ -73,11 +73,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#FFFF',
     alignSelf: 'center'
-  },
-  createAccount: {
-    color: '#B5ADAD',
-    alignSelf: 'center',
-    textDecorationLine: 'underline',
   }
 })
 

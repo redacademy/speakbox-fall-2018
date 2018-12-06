@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
 // import AppNavigator from './navigation/RootStackNavigator'
-import UserLogin from './screens/Account/UserLoginContainer'
+import UserLogin from './screens/UserLogin/UserLoginContainer'
+import UserSignupContainer from './screens/UserSignup/UserSignupContainer'
 
 export default class App extends Component {
   render() {
-    return <UserLogin />
+    return <UserSignupContainer />
   }
 }
 
