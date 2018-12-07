@@ -1,2 +1,2 @@
-import MoodCheckContainer from "./MoodCheckContainer";
-export default MoodCheckContainer;
+import MoodCheck from "./MoodCheck";
+export default MoodCheck;

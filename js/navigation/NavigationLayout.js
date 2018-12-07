@@ -1,19 +1,48 @@
 import React from "react";
-import Account from "../screens/Account/Account";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import ActivityScreen from "../screens/Activity/Activity";
-import CommunityScreen from "../screens/Community/Community";
-import JournalScreen from "../screens/Journal/Journal";
-import DashBoardScreen from "../screens/Dashboard/Dashboard";
+import ActivityScreen from "../screens/Activity";
+import CommunityScreen from "../screens/Community";
+import JournalScreen from "../screens/Journal";
+import DashBoardScreen from "../screens/Dashboard";
+import ActivityDetailsScreen from "../screens/ActivityDetails";
+import ProfileScreen from "../screens/Profile";
+import EditProfileScreen from "../screens/EditProfile";
+import CommunityCategoryScreen from "../screens/CommunityCategory";
+import CommunityQuestionScreen from "../screens/CommunityQuestion";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
   createBottomTabNavigator
 } from "react-navigation";
+import { Image } from "react-native";
+import styles from "./styles";
 
+const ProfileStack = createStackNavigator(
+  {
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const EditProfileStack = createStackNavigator(
+  {
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 const ActivityStack = createStackNavigator(
   {
-    Activity: ActivityScreen
+    Activity: ActivityScreen,
+    ActivityDetails: ActivityDetailsScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -23,8 +52,13 @@ const ActivityStack = createStackNavigator(
 );
 const CommunityStack = createStackNavigator(
   {
-    Community: CommunityScreen
+    Community: CommunityScreen,
+    CommunityCategory: CommunityCategoryScreen,
+    CommunityQuestion: CommunityQuestionScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen,
   },
+
   {
     defaultNavigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
@@ -33,7 +67,9 @@ const CommunityStack = createStackNavigator(
 );
 const JournalStack = createStackNavigator(
   {
-    Journal: JournalScreen
+    Journal: JournalScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -43,7 +79,9 @@ const JournalStack = createStackNavigator(
 );
 const DashBoardStack = createStackNavigator(
   {
-    DashBoard: DashBoardScreen
+    DashBoard: DashBoardScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -54,40 +92,34 @@ const DashBoardStack = createStackNavigator(
 
 export default createBottomTabNavigator(
   {
-    Activity: ActivityStack,
-
-    Community: CommunityStack,
+    DashBoard: DashBoardStack,
 
     Journal: JournalStack,
 
-    DashBoard: DashBoardStack
+    Activity: ActivityStack,
+
+    Community: CommunityStack
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ horizontal, tintColor }) => {
         const { routeName } = navigation.state;
-        let iconName;
+        let image;
         if (routeName === "Activity") {
-          iconName = `ios-body`;
+          image = require("../assets/Icons/basketball-ball.png");
         } else if (routeName === "Community") {
-          iconName = `ios-contacts`;
+          image = require("../assets/Icons/user-friends.png");
         } else if (routeName === "Journal") {
-          iconName = `ios-journal`;
+          image = require("../assets/Icons/book-open.png");
         } else if (routeName === "DashBoard") {
-          iconName = `ios-clipboard`;
+          image = require("../assets/Icons/analytics.png");
         }
-        return (
-          <Ionicons
-            name={iconName}
-            size={horizontal ? 25 : 25}
-            color={tintColor}
-          />
-        );
+        return <Image style={styles.navIcons} source={image} />;
       }
     }),
     tabBarOptions: {
-      activeTintColor: "black",
-      inactiveTintColor: "#999",
+      activeBackgroundColor: "#efefef",
+      showLabel: false,
       labelStyle: {
         fontSize: 10
       },

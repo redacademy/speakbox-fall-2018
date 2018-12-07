@@ -1,18 +1,29 @@
 import React from "react";
-import { Text } from "react-native";
+import { Image, View, TouchableOpacity } from "react-native";
 import { Header } from "react-navigation";
+import styles from "./styles";
+
+Header.HEIGHT;
 
 export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <Header {...props} />,
-
-  headerTitle: (
-    <Text style={{ height: "100%", width: "50%", marginBottom: 10 }}>
-      hello
-    </Text>
+  headerRight: (
+    <View style={styles.header}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Profile");
+        }}
+      >
+        <Image
+          style={styles.profileIcon}
+          source={require("../assets/Icons/profile-photo-icon.png")}
+        />
+      </TouchableOpacity>
+    </View>
   ),
 
   headerStyle: {
-    backgroundColor: "black"
+    borderBottomColor: "transparent"
   }
 });
