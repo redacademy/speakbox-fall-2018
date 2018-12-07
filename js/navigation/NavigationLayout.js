@@ -1,10 +1,13 @@
 import React from "react";
-import ActivityScreen from "../screens/Activity/Activity";
-import CommunityScreen from "../screens/Community/Community";
-import JournalScreen from "../screens/Journal/Journal";
-import DashBoardScreen from "../screens/Dashboard/Dashboard";
-import ProfileScreen from "../screens/Profile/Profile";
-import EditProfileScreen from "../screens/EditProfile/EditProfile";
+import ActivityScreen from "../screens/Activity";
+import CommunityScreen from "../screens/Community";
+import JournalScreen from "../screens/Journal";
+import DashBoardScreen from "../screens/Dashboard";
+import ActivityDetailsScreen from "../screens/ActivityDetails";
+import ProfileScreen from "../screens/Profile";
+import EditProfileScreen from "../screens/EditProfile";
+import CommunityCategoryScreen from "../screens/CommunityCategory";
+import CommunityQuestionScreen from "../screens/CommunityQuestion";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -37,6 +40,7 @@ const EditProfileStack = createStackNavigator(
 const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen,
+    ActivityDetails: ActivityDetailsScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },
@@ -49,9 +53,12 @@ const ActivityStack = createStackNavigator(
 const CommunityStack = createStackNavigator(
   {
     Community: CommunityScreen,
+    CommunityCategory: CommunityCategoryScreen,
+    CommunityQuestion: CommunityQuestionScreen,
     Profile: ProfileScreen,
-    EditProfile: EditProfileScreen
+    EditProfile: EditProfileScreen,
   },
+
   {
     defaultNavigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
@@ -111,8 +118,7 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "black",
-      inactiveTintColor: "#999",
+      activeBackgroundColor: "#efefef",
       showLabel: false,
       labelStyle: {
         fontSize: 10

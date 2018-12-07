@@ -1,9 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const globalStyles = StyleSheet.create({
-  // Touchable Opacity :
-  // activityOpacity is 0.6
-
+const globalStyles = {
   titleFont: {
     fontFamily: "sans-serif", // Change to Quicksand when imported
     fontSize: 25,
@@ -12,8 +9,7 @@ const globalStyles = StyleSheet.create({
 
   textFont: {
     fontFamily: "sans-serif", // Change to Quicksand Light when imported
-    // fontWeight: "lighter",
-    fontSize: 15
+    fontSize: 14
   },
 
   inputBoxFont: {
@@ -22,7 +18,14 @@ const globalStyles = StyleSheet.create({
     fontWeight: "900"
   },
 
-  greyTextColor: { color: "#5D5D5D" }
-});
+  greyTextColor: { color: "#5D5D5D" },
+  blueGradientColor: { start: { color: "#A4E8FF" }, end: { color: "#6BCCFD" } },
+  pinkGradientColor: { start: { color: "#FFB5BA" }, end: { color: "#FBE3D7" } },
+
+  screenGradientColor: {
+    start: { color: "#BBDED6" },
+    end: { color: "#FAE3D9" }
+  }
+};
 
 export default globalStyles;
