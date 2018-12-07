@@ -18,7 +18,6 @@ export default class LoginForm extends Component {
   }
 
   onSubmit = values => {
-    // console.log(values)
     this.callingAPI(values)
   }
   validate = values => {
@@ -35,47 +34,50 @@ export default class LoginForm extends Component {
   render() {
     return (
       <Form
-        style={styles.formContainer}
         onSubmit={values => this.onSubmit(values)}
         validate={values => this.validate(values)}
         render={({ handleSubmit, pristine, invalid }) => (
-          <View>
-            <View style={styles.usernameInput}>
-              <Field
-                name='email'
-                render={({ input, meta }) => {
-                  return (
-                    <TextInput
-                      {...input}
-                      placeholder='Username'
-                      autoCapitalize='none'
-                    />
-                  )
-                }}
-              />
+          <View style={styles.formContainer}>
+            <View style={styles.inputContainer}>
+              <View style={styles.usernameInput}>
+                <Field
+                  name='email'
+                  render={({ input, meta }) => {
+                    return (
+                      <TextInput
+                        {...input}
+                        placeholder='Username'
+                        autoCapitalize='none'
+                      />
+                    )
+                  }}
+                />
+              </View>
+              <View style={styles.passwordInput}>
+                <Field
+                  name='password'
+                  render={({ input, meta }) => {
+                    return (
+                      <TextInput
+                        {...input}
+                        secureTextEntry={true}
+                        placeholder='Password'
+                      />
+                    )
+                  }}
+                />
+              </View>
             </View>
-            <View style={styles.passwordInput}>
-              <Field
-                name='password'
-                render={({ input, meta }) => {
-                  return (
-                    <TextInput
-                      {...input}
-                      secureTextEntry={true}
-                      placeholder='Password'
-                    />
-                  )
-                }}
-              />
+            <View style={styles.linkButtonContainer}>
+              <Text style={styles.forgotPassword}>Forgot Password?</Text>
+              <TouchableOpacity
+                style={styles.button}
+                onPress={() => handleSubmit()}
+              >
+                <Text style={styles.buttonText}>SIGN IN</Text>
+              </TouchableOpacity>
+              <Text style={styles.createAccount}>Create Account</Text>
             </View>
-            <Text style={styles.forgotPassword}>Forgot Password?</Text>
-            <TouchableOpacity
-              style={styles.button}
-              onPress={() => handleSubmit()}
-            >
-              <Text style={styles.buttonText}>SIGN IN</Text>
-            </TouchableOpacity>
-            <Text style={styles.createAccount}>Create Account</Text>
           </View>
         )}
       />

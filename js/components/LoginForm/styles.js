@@ -2,76 +2,53 @@ import { StyleSheet, Dimensions } from 'react-native'
 const { width, height } = Dimensions.get('window')
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    height,
-    width,
+  formContainer: {
+    alignItems: 'center',
     justifyContent: 'center'
   },
-  background: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
-  },
-  logoImage: {
-    height: 80,
-    width: 80,
-    alignSelf: 'center',
-    marginTop: 40,
-    marginBottom: 15
-  },
-  logoHeader: {
-    color: '#5D5D5D',
-    alignSelf: 'center',
-    fontSize: 40,
-    marginBottom: 60
-  },
+  inputContainer: {
+    justifyContent: 'space-between',
+    height: height / 6
+  },  
   usernameInput: {
     justifyContent: 'flex-start',
     borderWidth: 1,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 40,
-    marginBottom: 15,
     borderRadius: 3,
     borderColor: '#FFFF',
     shadowOpacity: 0.75,
     shadowRadius: 5,
     shadowColor: '#B5ADAD',
-    shadowOffset: { height: 1, width: 1 }
+    shadowOffset: { height: 1, width: 1 },
+    width: width / 1.1,
+    padding: 12
   },
   passwordInput: {
     justifyContent: 'flex-start',
     borderWidth: 1,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 15,
     borderRadius: 3,
     borderColor: '#FFFF',
     shadowOpacity: 0.75,
     shadowRadius: 5,
     shadowColor: '#B5ADAD',
-    shadowOffset: { height: 1, width: 1 }
+    shadowOffset: { height: 1, width: 1 },
+    width: width / 1.1,
+    padding: 12
+  },
+  linkButtonContainer: {
+    justifyContent: 'space-evenly',
+    height: height / 4
   },
   forgotPassword: {
     color: '#B5ADAD',
     alignSelf: 'center',
-    marginBottom: 30
+    textDecorationLine: 'underline'
   },
   button: {
     color: 'white',
     backgroundColor: '#FFB5BA',
     borderRadius: 30,
-    marginLeft: 80,
-    marginRight: 80,
-    padding: 15,
-    fontSize: 12,
-    marginBottom: 15
+    width: width / 2.5,
+    padding: 12
   },
   buttonText: {
     color: '#FFFF',

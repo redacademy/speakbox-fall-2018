@@ -6,81 +6,28 @@ const styles = StyleSheet.create({
     flex: 1,
     height,
     width,
-    justifyContent: 'center'
+    justifyContent: 'space-between'
   },
   background: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    width,
+    height
+  },
+  logoContainer: {
+    justifyContent: 'space-between',
+    height: height / 3
   },
   logoImage: {
-    height: 80,
-    width: 80,
+    height: height / 5,
+    width: width / 4,
     alignSelf: 'center',
-    marginTop: 40,
-    marginBottom: 15
+    resizeMode: 'center',
+    marginTop: 50,
+    marginBottom: -10
   },
   logoHeader: {
     color: '#5D5D5D',
     alignSelf: 'center',
-    fontSize: 40,
-    marginBottom: 60
-  },
-  usernameInput: {
-    justifyContent: 'flex-start',
-    borderWidth: 1,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    marginTop: 40,
-    marginBottom: 15,
-    borderRadius: 3,
-    borderColor: '#FFFF',
-    shadowOpacity: 0.75,
-    shadowRadius: 5,
-    shadowColor: '#B5ADAD',
-    shadowOffset: { height: 1, width: 1 }
-  },
-  passwordInput: {
-    justifyContent: 'flex-start',
-    borderWidth: 1,
-    paddingTop: 12,
-    paddingBottom: 12,
-    paddingLeft: 10,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 15,
-    borderRadius: 3,
-    borderColor: '#FFFF',
-    shadowOpacity: 0.75,
-    shadowRadius: 5,
-    shadowColor: '#B5ADAD',
-    shadowOffset: { height: 1, width: 1 }
-  },
-  forgotPassword: {
-    color: '#B5ADAD',
-    alignSelf: 'center',
-    marginBottom: 30
-  },
-  button: {
-    color: 'white',
-    backgroundColor: '#FFB5BA',
-    borderRadius: 30,
-    marginLeft: 80,
-    marginRight: 80,
-    padding: 15,
-    fontSize: 12,
-    marginBottom: 15
-  },
-  buttonText: {
-    color: '#FFFF',
-    alignSelf: 'center'
-  },
-  createAccount: {
-    color: '#B5ADAD',
-    alignSelf: 'center',
-    textDecorationLine: 'underline'
+    fontSize: 40
   }
 })
 
