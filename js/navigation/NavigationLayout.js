@@ -3,6 +3,7 @@ import ActivityScreen from "../screens/Activity";
 import CommunityScreen from "../screens/Community";
 import JournalScreen from "../screens/Journal";
 import DashBoardScreen from "../screens/Dashboard";
+import ActivityDetailsScreen from "../screens/ActivityDetails";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -15,7 +16,8 @@ import CommunityCategoryScreen from "../screens/CommunityCategory";
 import CommunityQuestionScreen from "../screens/CommunityQuestion";
 const ActivityStack = createStackNavigator(
   {
-    Activity: ActivityScreen
+    Activity: ActivityScreen,
+    ActivityDetails: ActivityDetailsScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -85,8 +87,7 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "black",
-      inactiveTintColor: "#999",
+      activeBackgroundColor: "#efefef",
       showLabel: false,
       labelStyle: {
         fontSize: 10
