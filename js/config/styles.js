@@ -1,7 +1,10 @@
+import { StyleSheet } from "react-native";
+
 const globalStyles = {
   titleFont: {
     fontFamily: "sans-serif", // Change to Quicksand when imported
-    fontSize: 25
+    fontSize: 25,
+    letterSpacing: 2
   },
 
   textFont: {
@@ -11,7 +14,8 @@ const globalStyles = {
 
   inputBoxFont: {
     fontFamily: "sans-serif", // Change to Avenir Light when imported
-    fontSize: 13
+    fontSize: 13,
+    fontWeight: "900"
   },
 
   greyTextColor: { color: "#5D5D5D" },

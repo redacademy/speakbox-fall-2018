@@ -4,6 +4,10 @@ import CommunityScreen from "../screens/Community";
 import JournalScreen from "../screens/Journal";
 import DashBoardScreen from "../screens/Dashboard";
 import ActivityDetailsScreen from "../screens/ActivityDetails";
+import ProfileScreen from "../screens/Profile";
+import EditProfileScreen from "../screens/EditProfile";
+import CommunityCategoryScreen from "../screens/CommunityCategory";
+import CommunityQuestionScreen from "../screens/CommunityQuestion";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -12,12 +16,33 @@ import {
 import { Image } from "react-native";
 import styles from "./styles";
 
-import CommunityCategoryScreen from "../screens/CommunityCategory";
-import CommunityQuestionScreen from "../screens/CommunityQuestion";
+const ProfileStack = createStackNavigator(
+  {
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const EditProfileStack = createStackNavigator(
+  {
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen,
-    ActivityDetails: ActivityDetailsScreen
+    ActivityDetails: ActivityDetailsScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -29,7 +54,9 @@ const CommunityStack = createStackNavigator(
   {
     Community: CommunityScreen,
     CommunityCategory: CommunityCategoryScreen,
-    CommunityQuestion: CommunityQuestionScreen
+    CommunityQuestion: CommunityQuestionScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen,
   },
 
   {
@@ -40,7 +67,9 @@ const CommunityStack = createStackNavigator(
 );
 const JournalStack = createStackNavigator(
   {
-    Journal: JournalScreen
+    Journal: JournalScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -50,7 +79,9 @@ const JournalStack = createStackNavigator(
 );
 const DashBoardStack = createStackNavigator(
   {
-    DashBoard: DashBoardScreen
+    DashBoard: DashBoardScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
