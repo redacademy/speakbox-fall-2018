@@ -1,20 +1,7 @@
-import React, { Component } from 'react'
-import { StyleSheet } from 'react-native'
-// import AppNavigator from './navigation/RootStackNavigator'
-import UserLoginContainer from './screens/UserLogin/UserLoginContainer'
-// import UserSignupContainer from './screens/UserSignup/UserSignupContainer'
-
+import React, { Component } from "react";
+import AppNavigator from "./navigation/RootStackNavigator";
 export default class App extends Component {
   render() {
-    return <UserLoginContainer />
+    return <AppNavigator />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  }
-})
