@@ -24,6 +24,12 @@
     "metro-react-native-babel-preset": "0.50.0",
     "react-test-renderer": "16.6.1"
   },
+  "rnpm": {
+    "assets": [
+      "js/assets/fonts/Quicksand",
+      "js/assets/fonts/Avenir"
+    ]
+  },
   "jest": {
     "preset": "react-native"
   }
