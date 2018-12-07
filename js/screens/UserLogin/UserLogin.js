@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 import { View, Text, Image, ImageBackground } from 'react-native'
 import LoginForm from '../../components/LoginForm'
 import styles from './styles'

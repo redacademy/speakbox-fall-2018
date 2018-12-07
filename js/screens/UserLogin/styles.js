@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
   logoHeader: {
     color: '#5D5D5D',
     alignSelf: 'center',
-    fontSize: 40,
-    // fontFamily: 'Quicksand'
+    fontSize: 40
   }
 })
 

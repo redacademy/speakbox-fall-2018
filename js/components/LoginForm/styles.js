@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color: '#B5ADAD',
     alignSelf: 'center',
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
   },
   button: {
-    color: 'white',
+    color: '#FFFF',
     backgroundColor: '#FFB5BA',
     borderRadius: 30,
     width: width / 2.5,
