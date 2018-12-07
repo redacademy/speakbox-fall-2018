@@ -9,7 +9,7 @@ export const apiPromise = (path, headerConfigs) => {
   };
 
   const headerOptions = {
-    method: 'GET', //defalut method
+    method: 'GET',
     ...headerConfigs,
     headers: { ...headerConfigs.headers, ...defaultHeaderOptions.headers },
   };

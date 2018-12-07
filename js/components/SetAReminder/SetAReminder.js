@@ -23,15 +23,15 @@ class SetAReminder extends Component {
     };
   }
   setDate = newDate => {
-    console.log(newDate)
+    console.log(newDate);
     this.setState({ chosenDate: newDate });
   };
   toggleReminderSwitch = value => {
     this.setState({ reminderSwitch: value });
   };
-  setModalVisible(visible) {
+  setModalVisible = visible => {
     this.setState({ modalVisible: visible });
-  }
+  };
 
   render() {
     return (

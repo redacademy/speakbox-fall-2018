@@ -23,8 +23,6 @@ const globalStyles = StyleSheet.create({
   },
 
   greyTextColor: { color: "#5D5D5D" }
-  // blueGradientColor: { start: { color: "#A4E8FF" }, end: { color: "#6BCCFD" } },
-  // pinkGradientColor: { start: { color: "#FFB5BA" }, end: { color: "#FBE3D7" } }
 });
 
 export default globalStyles;

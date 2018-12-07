@@ -46,8 +46,6 @@ const styles = StyleSheet.create({
   reminderColumn: {
     backgroundColor: "white",
     width: width / 1.1,
-    // paddingLeft: 10,
-    // paddingRight: 10,
     padding: 10,
     borderRadius: 5
   },
