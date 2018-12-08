@@ -45,12 +45,18 @@ class SetAReminder extends Component {
         >
           <View style={styles.modalContentContainer}>
             <LinearGradient
+<<<<<<< HEAD
               start={{ x: 0, y: 0 }}
               end={{ x: 0, y: 1 }}
               colors={[
                 globalStyles.modalGradientColor.start.color,
                 globalStyles.modalGradientColor.end.color
               ]}
+=======
+             start={{ x: 0, y: 0 }}
+             end={{ x: 0, y: 1 }}
+              colors={["#F3E3D8", "#fff"]}
+>>>>>>> add Loading Component with animation
               style={[
                 StyleSheet.absoluteFill,
                 { height: "100%", width: "100%", borderRadius: 10 }
@@ -77,12 +83,18 @@ class SetAReminder extends Component {
               }}
             >
               <LinearGradient
+<<<<<<< HEAD
                 start={{ x: 0, y: 0 }}
                 end={{ x: 0, y: 1 }}
                 colors={[
                   globalStyles.blueGradientColor.start.color,
                   globalStyles.blueGradientColor.end.color
                 ]}
+=======
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+                colors={["#A4E8FF", "#6BCCFD"]}
+>>>>>>> add Loading Component with animation
                 style={[
                   StyleSheet.absoluteFill,
                   {
