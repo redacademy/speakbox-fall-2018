@@ -2,30 +2,35 @@ import { StyleSheet } from "react-native";
 
 const globalStyles = {
   titleFont: {
-    fontFamily: "sans-serif", // Change to Quicksand when imported
+    fontFamily: "Quicksand",
     fontSize: 25,
     letterSpacing: 2
   },
 
   textFont: {
-    fontFamily: "sans-serif", // Change to Quicksand Light when imported
+    fontFamily: "Quicksand",
     fontSize: 14
   },
 
   inputBoxFont: {
-    fontFamily: "sans-serif", // Change to Avenir Light when imported
+    fontFamily: "Avenir",
     fontSize: 13,
     fontWeight: "900"
   },
 
   greyTextColor: { color: "#5D5D5D" },
   blueGradientColor: { start: { color: "#A4E8FF" }, end: { color: "#6BCCFD" } },
-  pinkGradientColor: { start: { color: "#FFB5BA" }, end: { color: "#FBE3D7" } },
+  pinkGradientColor: { start: { color: "#FDCCC8" }, end: { color: "#FFB5BA" } },
 
   screenGradientColor: {
     start: { color: "#BBDED6" },
     end: { color: "#FAE3D9" }
   },
+  modalGradientColor: {
+    start: { color: "#F3E3D8" },
+    end: { color: "#fff" }
+  },
+
   navigationHeader: {
     backgroundColor: "#bbded6",
     borderBottomColor: "transparent"

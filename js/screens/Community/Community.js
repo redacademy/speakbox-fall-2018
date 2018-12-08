@@ -9,12 +9,12 @@ import globalStyles from "../../config/styles";
 const Community = props => {
   return (
     <LinearGradient
-      start={{ x: 1, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      colors={[
-        globalStyles.screenGradientColor.start.color,
-        globalStyles.screenGradientColor.end.color
-      ]}
+    start={{ x: 0, y: 0 }}
+    end={{ x: 0, y: 1 }}
+    colors={[
+      globalStyles.screenGradientColor.start.color,
+      globalStyles.screenGradientColor.end.color
+    ]}
       style={styles.linearGradient}
     >
       <View style={props.isVisible ? styles.dimContainer : styles.container}>

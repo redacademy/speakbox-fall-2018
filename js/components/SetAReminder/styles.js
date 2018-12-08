@@ -12,32 +12,47 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     justifyContent: "space-around"
   },
-  setAReminder: {
+  setAReminderTitle: {
     paddingTop: 30,
     alignSelf: "center",
-    // fontFamily: globalStyles.titleFont.fontFamily,
+    fontFamily: globalStyles.titleFont.fontFamily,
     fontSize: globalStyles.titleFont.fontSize,
     ...globalStyles.greyTextColor,
-    letterSpacing: globalStyles.titleFont.letterSpacing
+    letterSpacing: globalStyles.titleFont.letterSpacing,
+    textTransform: "uppercase"
+  },
+  habit: {
+    fontFamily: globalStyles.textFont.fontFamily,
+    fontSize: globalStyles.textFont.fontSize,
+    ...globalStyles.greyTextColor,
+    alignSelf: "center",
+    textAlign: "center",
+    marginTop: 15,
+    width: width / 1.5,
+    color: "#5D5D5D"
   },
   setReminderButton: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white",
-    backgroundColor: "#6BCCFD",
-    borderRadius: 20,
-    height: 37,
-    width: 168,
+    height: height / 20,
+    width: width / 2.5,
     alignItems: "center",
     alignSelf: "center",
     justifyContent: "center"
   },
   setReminder: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white"
+    color: "white",
+    textTransform: "uppercase"
   },
-  reminderContainer: {},
+  skip: {
+    marginTop: 15,
+    alignSelf: "center",
+    textTransform: "uppercase",
+    color: "#B5ADAD",
+    textDecorationLine: "underline"
+  },
   reminder: {
     marginBottom: 10,
     fontSize: globalStyles.textFont.fontSize,
@@ -50,7 +65,7 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   reminderRow1: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
     fontWeight: globalStyles.textFont.fontWeight,
     flexDirection: "row",
@@ -60,7 +75,7 @@ const styles = StyleSheet.create({
     marginBottom: 5
   },
   reminderRow2: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
     fontWeight: globalStyles.textFont.fontWeight,
     flexDirection: "row",

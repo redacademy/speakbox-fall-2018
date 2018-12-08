@@ -9,21 +9,23 @@ import {
   StyleSheet,
   ImageBackground
 } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 import SetAReminder from "../../components/SetAReminder/";
 import styles from "./styles";
+import globalStyles from "../../config/styles";
+
 
 const Profile = ({ navigation }) => {
   return (
-    <ImageBackground          
+    <ImageBackground
       source={require("../../assets/Background/background.png")}
       style={{ width: "100%", height: "100%" }}
     >
       <ScrollView>
         <View style={styles.profileContainer}>
           <Image
-            style={{ width: 120, height: 120 }}
-            source={{ uri: "https://speakbox.ca/images/logo.png" }}
-            // source={require("../../assets/Avatars/beachBear.svg")}
+            style={styles.avatar}
+            source={require("../../assets/Avatars/beachBear.png")}
           />
           <Text style={styles.accountName}>Account Name</Text>
           <TouchableOpacity
@@ -33,6 +35,23 @@ const Profile = ({ navigation }) => {
               navigation.navigate("EditProfile");
             }}
           >
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              colors={[
+                globalStyles.pinkGradientColor.start.color,
+                globalStyles.pinkGradientColor.end.color
+              ]}
+              style={[
+                StyleSheet.absoluteFill,
+                {
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: 20,
+                  padding: 20
+                }
+              ]}
+            />
             <Text style={styles.editAccount}>Edit Account</Text>
           </TouchableOpacity>
           <View style={styles.plantContainer}>
@@ -61,12 +80,29 @@ const Profile = ({ navigation }) => {
           <Text style={styles.plantDescription}>
             [Plant Name] is [number] journal entries away from sprouting a bud!
           </Text>
-          <SetAReminder />
+          <SetAReminder navigation={navigation} />
           <TouchableOpacity
             activeOpacity={0.6}
             style={styles.logoutButton}
             onPress={() => {}}
           >
+            <LinearGradient
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              colors={[
+                globalStyles.blueGradientColor.start.color,
+                globalStyles.blueGradientColor.end.color
+              ]}
+              style={[
+                StyleSheet.absoluteFill,
+                {
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: 20,
+                  padding: 20
+                }
+              ]}
+            />
             <Text style={styles.logout}>Log Out</Text>
           </TouchableOpacity>
         </View>
