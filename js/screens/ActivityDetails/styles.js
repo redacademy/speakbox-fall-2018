@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: "space-evenly"
+    justifyContent: "space-evenly",
+    height: height * 1.1
   },
   title: {
     fontSize: 25,
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
   button: {
     padding: 5,
     borderRadius: 25,
-    width: width / 3,
+    width: width / 2.5,
     marginVertical: 5,
     alignSelf: "center"
   },
