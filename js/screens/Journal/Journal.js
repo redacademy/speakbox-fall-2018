@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
+import Loading from "../../components/Loading";
 
 const Journal = () => {
   return (
     <View>
-      <Text>Journal</Text>
+      <Loading />
     </View>
   );
 };

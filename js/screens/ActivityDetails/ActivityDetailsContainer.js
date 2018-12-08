@@ -17,8 +17,12 @@ export default class ActivityContainer extends Component {
     headerStyle: {
       ...globalStyles.navigationHeader
     }
+<<<<<<< HEAD
   };
 
+=======
+  }
+>>>>>>> add Loading Component with animation
   toggleVisibility = () => {
     this.setState({ isVisible: !this.state.isVisible });
 

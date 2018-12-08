@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet
 } from "react-native";
-import getAPI from "../../config/api";
 import { Form, Field } from "react-final-form";
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
@@ -105,12 +104,18 @@ export default class EditProfileForm extends Component {
               }}
             >
               <LinearGradient
+<<<<<<< HEAD
                  start={{ x: 0, y: 0 }}
                  end={{ x: 0, y: 1 }}
                  colors={[
                    globalStyles.blueGradientColor.start.color,
                    globalStyles.blueGradientColor.end.color
                  ]}
+=======
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
+                colors={["#A4E8FF", "#6BCCFD"]}
+>>>>>>> add Loading Component with animation
                 style={[
                   StyleSheet.absoluteFill,
                   {

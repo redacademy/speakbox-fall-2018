@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase"
   },
   avatarContainer: {
+<<<<<<< HEAD
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -65,6 +66,33 @@ const styles = StyleSheet.create({
     tintColor: "#fff",
     backgroundColor: "#FDCCC8",
     borderRadius: 20
+=======
+    height: height / 4,
+    flexWrap: "wrap",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    paddingRight: 10,
+    paddingLeft: 10
+  },
+  avatar: {
+    resizeMode: "center",
+    width: width / 4,
+    height: height / 8,
+    marginTop: 15,
+    backgroundColor: "#FFF",
+    borderRadius: 10
+  },
+  avatarSelected: {
+    resizeMode: "center",
+    width: width / 4,
+    height: height / 8,
+    marginTop: 15,
+    backgroundColor: "#FFF",
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#64BEBD"
+>>>>>>> add Loading Component with animation
   },
   saveButton: {
     fontFamily: globalStyles.textFont.fontFamily,
