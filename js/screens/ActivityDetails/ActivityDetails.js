@@ -10,8 +10,9 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 import globalStyles from "../../config/styles";
+import ActivityModal from "../../components/ActivityModal";
 
-const ActivityDetails = () => {
+const ActivityDetails = props => {
   return (
     <ImageBackground
       source={require("../../assets/Background/background-3.png")}
@@ -32,7 +33,11 @@ const ActivityDetails = () => {
             </Text>
           </View>
           <View>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                props.toggleVisibility();
+              }}
+            >
               <LinearGradient
                 colors={[
                   globalStyles.blueGradientColor.start.color,
@@ -43,6 +48,10 @@ const ActivityDetails = () => {
                 style={styles.button}
               >
                 <Text style={styles.buttonTitle}>Do it Now</Text>
+                <ActivityModal
+                  isVisible={props.isVisible}
+                  toggleVisibility={props.toggleVisibility}
+                />
               </LinearGradient>
             </TouchableOpacity>
             <TouchableOpacity>
