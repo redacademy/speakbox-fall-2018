@@ -5676,14 +5676,6 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-notifications@^1.1.22:
-  version "1.1.22"
-  resolved "https://registry.yarnpkg.com/react-native-notifications/-/react-native-notifications-1.1.22.tgz#668af44e25cf926583e531c85e7bb24be4f48098"
-  integrity sha512-xqVeHPhRIxfy2KMewkQKSXH5FpRJL4aQA1rdqIYznl9nw/n25p35iClMsjzQB6jMDyOluZaGYd58jQvLda8tng==
-  dependencies:
-    core-js "^1.0.0"
-    uuid "^2.0.3"
-
 react-native-onboarding-swiper@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/react-native-onboarding-swiper/-/react-native-onboarding-swiper-0.10.0.tgz#0faac79c67d71ce28ee539d660a9d1a7edb9ec16"
@@ -7058,11 +7050,6 @@ uuid@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
   integrity sha1-ZUS7ot/ajBzxfmKaOjBeK7H+5sE=
-
-uuid@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
-  integrity sha1-Z+LoY3lyFVMN/zGOW/nc6/1Hsho=
 
 uuid@^3.3.2:
   version "3.3.2"
