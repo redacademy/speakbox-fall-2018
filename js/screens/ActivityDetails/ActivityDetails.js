@@ -20,15 +20,16 @@ const ActivityDetails = props => {
     >
       <ScrollView>
         <View style={styles.container}>
-          <Text style={styles.title}>Go For Walk</Text>
+          <Text style={styles.title}>
+            {props.activity && props.activity.title}
+          </Text>
           <View style={styles.profile}>
             <Image
               style={styles.activityImage}
-              source={require("../../assets/Placeholder/placeholder-red.png")}
+              source={{ uri: props.activity && props.activity.image_url }}
             />
             <Text style={styles.description}>
-              Take a walk and leave your music player behind. Don't be afraid to
-              be alone with your thoughts.
+              {props.activity && props.activity.description}
               <Text style={styles.time}>20 minutes.</Text>
             </Text>
           </View>
@@ -48,10 +49,11 @@ const ActivityDetails = props => {
                 style={styles.button}
               >
                 <Text style={styles.buttonTitle}>Do it Now</Text>
-
                 <ActivityModal
+                  activity={props.activity}
                   isVisible={props.isVisible}
                   toggleVisibility={props.toggleVisibility}
+                  navigation={props.navigation}
                 />
               </LinearGradient>
             </TouchableOpacity>
@@ -72,28 +74,29 @@ const ActivityDetails = props => {
           <View style={styles.sectionTitle}>
             <Text style={styles.theme}>View Other Activities</Text>
           </View>
-          <ScrollView style={styles.carousel} horizontal={true}>
-            <Image
-              style={styles.image}
-              source={require("../../assets/Placeholder/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/Placeholder/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/Placeholder/placeholder-red.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/Placeholder/placeholder-blue.png")}
-            />
-            <Image
-              style={styles.image}
-              source={require("../../assets/Placeholder/placeholder-red.png")}
-            />
-          </ScrollView>
+          {props.allActivities && (
+            <ScrollView style={styles.carousel} horizontal={true}>
+              {props.allActivities.map((e, key) => {
+                return (
+                  <TouchableOpacity
+                    key={key}
+                    onPress={() => {
+                      props.navigation.navigate("ActivityDetails", {
+                        id: e.id
+                      });
+                    }}
+                  >
+                    <Image
+                      style={styles.image}
+                      source={{
+                        uri: e.image_url
+                      }}
+                    />
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+          )}
         </View>
       </ScrollView>
     </ImageBackground>

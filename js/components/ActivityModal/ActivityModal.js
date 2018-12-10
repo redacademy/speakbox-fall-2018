@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { View, Text, Modal, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
@@ -10,9 +9,7 @@ const ActivityModal = props => {
     <React.Fragment>
       <Modal
         animationType="fade"
-        onRequestClose={() => {
-          console.log("close");
-        }}
+        onRequestClose={() => {}}
         visible={props.isVisible}
         transparent={true}
       >
@@ -20,8 +17,8 @@ const ActivityModal = props => {
           <Text style={styles.title}>ENJOY YOUR ACTIVITY!</Text>
           <Text style={styles.text}>Don't forget to log it after!</Text>
           <LinearGradient
-            start={{ x: 0, y: 0 }}
-            end={{ x: 0, y: 1 }}
+            start={{ x: 1, y: 0 }}
+            end={{ x: 1, y: 1 }}
             colors={[
               globalStyles.blueGradientColor.start.color,
               globalStyles.blueGradientColor.end.color
@@ -31,6 +28,9 @@ const ActivityModal = props => {
             <TouchableOpacity
               onPress={() => {
                 props.toggleVisibility();
+                props.navigation.navigate("ActivityComplete", {
+                  activity: props.activity
+                });
               }}
             >
               <Text style={styles.buttonText}>Got It</Text>

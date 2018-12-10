@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import styles from "./styles";
 
-const Activity = ({ navigation }) => {
+const Activity = props => {
   return (
     <ImageBackground
       source={require("../../assets/Background/background-2.png")}
@@ -24,109 +24,81 @@ const Activity = ({ navigation }) => {
             <View style={styles.sectionTitle}>
               <Text style={styles.theme}>Saved</Text>
             </View>
-            <ScrollView style={styles.carousel} horizontal={true}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate("ActivityDetails");
-                }}
-              >
-                <Image
-                  style={styles.image}
-                  source={require("../../assets/Placeholder/placeholder-red.png")}
-                />
-              </TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-            </ScrollView>
+            <ScrollView style={styles.carousel} horizontal={true} />
             <View style={styles.sectionTitle}>
               <Text style={styles.theme}>Mind</Text>
             </View>
-            <ScrollView style={styles.carousel} horizontal={true}>
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-            </ScrollView>
+            {props.activities && (
+              <ScrollView style={styles.carousel} horizontal={true}>
+                {props.activities.map((e, key) => {
+                  return (
+                    <TouchableOpacity
+                      key={key}
+                      onPress={() => {
+                        props.navigation.navigate("ActivityDetails", {
+                          id: e.id
+                        });
+                      }}
+                    >
+                      <Image
+                        style={styles.image}
+                        source={{
+                          uri: e.image_url
+                        }}
+                      />
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
+            )}
             <View style={styles.sectionTitle}>
               <Text style={styles.theme}>Body</Text>
             </View>
-            <ScrollView style={styles.carousel} horizontal={true}>
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-            </ScrollView>
+            {props.activities && (
+              <ScrollView style={styles.carousel} horizontal={true}>
+                {props.activities.map((e, key) => {
+                  return (
+                    <TouchableOpacity
+                      key={key}
+                      onPress={() => {
+                        props.navigation.navigate("ActivityDetails", {
+                          id: e.id
+                        });
+                      }}
+                    >
+                      <Image
+                        style={styles.image}
+                        source={{ uri: e.image_url }}
+                      />
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
+            )}
             <View style={styles.sectionTitle}>
               <Text style={styles.theme}>Social</Text>
             </View>
-            <ScrollView style={styles.carousel} horizontal={true}>
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-blue.png")}
-              />
-              <Image
-                style={styles.image}
-                source={require("../../assets/Placeholder/placeholder-red.png")}
-              />
-            </ScrollView>
+            {props.activities && (
+              <ScrollView style={styles.carousel} horizontal={true}>
+                {props.activities.map((e, key) => {
+                  return (
+                    <TouchableOpacity
+                      key={key}
+                      onPress={() => {
+                        props.navigation.navigate("ActivityDetails", {
+                          id: e.id
+                        });
+                      }}
+                    >
+                      <Image
+                        style={styles.image}
+                        source={{ uri: e.image_url }}
+                      />
+                    </TouchableOpacity>
+                  );
+                })}
+              </ScrollView>
+            )}
           </View>
         </View>
       </ScrollView>
