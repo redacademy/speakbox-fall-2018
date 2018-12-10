@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   buttonTitle: {
     textAlign: "center",
-    color: "white",
+    color: "#fff",
     fontSize: 16,
     lineHeight: 15 * 1.5
   },
@@ -55,6 +55,9 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: width / 1.3,
     height: height / 5.2
+  },
+  time: {
+    fontWeight: "700"
   }
 });
 export default styles;

@@ -25,6 +25,13 @@ const globalStyles = {
   screenGradientColor: {
     start: { color: "#BBDED6" },
     end: { color: "#FAE3D9" }
+  },
+  navigationHeader: {
+    backgroundColor: "#bbded6",
+    borderBottomColor: "transparent"
+  },
+  navigationTitle: {
+    color: "#fff"
   }
 };
 
