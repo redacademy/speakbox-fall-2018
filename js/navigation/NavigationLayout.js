@@ -56,7 +56,7 @@ const CommunityStack = createStackNavigator(
     CommunityCategory: CommunityCategoryScreen,
     CommunityQuestion: CommunityQuestionScreen,
     Profile: ProfileScreen,
-    EditProfile: EditProfileScreen,
+    EditProfile: EditProfileScreen
   },
 
   {
