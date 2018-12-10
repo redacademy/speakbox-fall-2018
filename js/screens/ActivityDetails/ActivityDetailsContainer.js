@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ActivityDetails from "./ActivityDetails";
-
+import globalStyles from "../../config/styles";
 export default class ActivityContainer extends Component {
   constructor(props) {
     super(props);
@@ -11,11 +11,10 @@ export default class ActivityContainer extends Component {
   static navigationOptions = {
     title: "Activity",
     headerStyle: {
-      backgroundColor: "#bbded6",
-      borderBottomColor: "transparent"
+      ...globalStyles.navigationHeader
     },
     titleStyle: {
-      color: "#fff"
+      ...globalStyles.navigationTitle
     }
   };
   toggleVisibility = () => {

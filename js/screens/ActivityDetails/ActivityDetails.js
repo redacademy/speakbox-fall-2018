@@ -29,7 +29,7 @@ const ActivityDetails = props => {
             <Text style={styles.description}>
               Take a walk and leave your music player behind. Don't be afraid to
               be alone with your thoughts.
-              <Text style={{ fontWeight: "700" }}>20 minutes.</Text>
+              <Text style={styles.time}>20 minutes.</Text>
             </Text>
           </View>
           <View>
