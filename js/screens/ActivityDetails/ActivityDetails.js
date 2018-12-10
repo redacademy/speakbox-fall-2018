@@ -48,6 +48,7 @@ const ActivityDetails = props => {
                 style={styles.button}
               >
                 <Text style={styles.buttonTitle}>Do it Now</Text>
+
                 <ActivityModal
                   isVisible={props.isVisible}
                   toggleVisibility={props.toggleVisibility}
