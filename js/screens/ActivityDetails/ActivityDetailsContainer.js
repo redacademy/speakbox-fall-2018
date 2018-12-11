@@ -10,10 +10,8 @@ export default class ActivityContainer extends Component {
   }
   static navigationOptions = {
     title: "Activity",
+    headerStyle: {
       ...globalStyles.navigationHeader
-    },
-    titleStyle: {
-      ...globalStyles.navigationTitle
     }
   };
   toggleVisibility = () => {

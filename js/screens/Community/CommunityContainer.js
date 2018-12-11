@@ -19,7 +19,7 @@ export default class CommunityContainer extends Component {
 
   callingAPI = async () => {
     const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NDM5NjIwODksImV4cCI6MTU0Mzk2NTY4OSwibmJmIjoxNTQzOTYyMDg5LCJqdGkiOiJwUHp5aVBpR3VCSUJ4N2ZGIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.C0VmOTeAcS8J32AgAsXLWPPyK_19UgTLuUdJENGdYms";
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NDQ1NDk2NTksImV4cCI6MTU0NDU1MzI1OSwibmJmIjoxNTQ0NTQ5NjU5LCJqdGkiOiI3cFVXWDUxZkpkNFdYMHI1Iiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.ZUg7kjsMBgAjyjMOOVX4QJbJNglSoEbjXO3aYka_Vmg";
     const res = await apiPromise("/categories", {
       headers: {
         Authorization: `Bearer${[token]}`
