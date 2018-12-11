@@ -1,19 +1,24 @@
 import { StyleSheet, Dimensions } from "react-native";
+const { height, width } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   header: {
-    flex: 1,
-    borderBottomColor: "white"
+    position: "relative",
+    borderBottomColor: "transparent",
+    backgroundColor: "transparent",
+    width: width - 10
   },
   profileIcon: {
-    width: Dimensions.get("window").width / 8,
-    height: Dimensions.get("window").height / 8,
-    resizeMode: "center",
     alignSelf: "flex-end",
-    marginRight: 10
+    width: width / 8,
+    height: height / 8,
+    resizeMode: "center",
+    position: "absolute",
+    top: -40
   },
   navIcons: {
-    width: Dimensions.get("window").width / 12,
-    height: Dimensions.get("window").height / 12,
+    width: width / 12,
+    height: height / 12,
     resizeMode: "center"
   }
 });
