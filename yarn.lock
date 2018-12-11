@@ -5676,14 +5676,6 @@ react-native-maps@0.21.0:
     babel-plugin-module-resolver "^2.3.0"
     babel-preset-react-native "1.9.0"
 
-react-native-notifications@^1.1.22:
-  version "1.1.22"
-  resolved "https://registry.yarnpkg.com/react-native-notifications/-/react-native-notifications-1.1.22.tgz#668af44e25cf926583e531c85e7bb24be4f48098"
-  integrity sha512-xqVeHPhRIxfy2KMewkQKSXH5FpRJL4aQA1rdqIYznl9nw/n25p35iClMsjzQB6jMDyOluZaGYd58jQvLda8tng==
-  dependencies:
-    core-js "^1.0.0"
-    uuid "^2.0.3"
-
 react-native-onboarding-swiper@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/react-native-onboarding-swiper/-/react-native-onboarding-swiper-0.10.0.tgz#0faac79c67d71ce28ee539d660a9d1a7edb9ec16"
