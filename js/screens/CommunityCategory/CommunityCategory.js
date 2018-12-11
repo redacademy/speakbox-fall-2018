@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
@@ -38,7 +38,17 @@ const CommunityCategory = props => {
             <FlatList
               data={props.topics.data}
               keyExtractor={(item, index) => `list-item-${index}`}
-              renderItem={({ item }) => <TopicListItem item={item} />}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  onPress={() => {
+                    props.navigation.navigate("CommunityTopic", {
+                      topic: item
+                    });
+                  }}
+                >
+                  <TopicListItem item={item} />
+                </TouchableOpacity>
+              )}
             />
           )}
         </View>

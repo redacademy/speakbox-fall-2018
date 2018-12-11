@@ -8,6 +8,7 @@ import ProfileScreen from "../screens/Profile";
 import EditProfileScreen from "../screens/EditProfile";
 import CommunityCategoryScreen from "../screens/CommunityCategory";
 import CommunityQuestionScreen from "../screens/CommunityQuestion";
+import CommunityTopicScreen from "../screens/CommunityTopic";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -55,6 +56,7 @@ const CommunityStack = createStackNavigator(
     Community: CommunityScreen,
     CommunityCategory: CommunityCategoryScreen,
     CommunityQuestion: CommunityQuestionScreen,
+    CommunityTopic: CommunityTopicScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },
