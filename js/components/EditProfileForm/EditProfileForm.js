@@ -4,40 +4,98 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
 } from "react-native";
 import getAPI from "../../config/api";
 import { Form, Field } from "react-final-form";
 import LinearGradient from "react-native-linear-gradient";
+import moment from "moment";
 import globalStyles from "../../config/styles";
 import styles from "./styles";
 
 export default class EditProfileForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      initialValues: {}
+    };
+  }
+  componentDidMount() {
+    this.getUser();
   }
 
-  onSubmit = values => {};
-  validate = values => {};
+  getUser = async values => {
+    const token =
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE1NDQ3NDQ3OTQsImV4cCI6MTU0NDc0ODM5NCwibmJmIjoxNTQ0NzQ0Nzk0LCJqdGkiOiJ3aFJiUW1iMDNwSHpOZFJRIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.04EaH262WbiN-Ss1p1ABDaYo3dfLu1431YGd-3zg7_s";
+    const response = await getAPI("/me", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer${[token]}`
+      },
+      body: JSON.stringify(values)
+    });
+    this.setState({
+      initialValues: {
+        first_name: response.data.first_name,
+        last_name: response.data.first_name,
+        email: response.data.email
+      }
+    });
+  };
+
+  updateUser = async values => {
+    const token =
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE1NDQ3NDQ3OTQsImV4cCI6MTU0NDc0ODM5NCwibmJmIjoxNTQ0NzQ0Nzk0LCJqdGkiOiJ3aFJiUW1iMDNwSHpOZFJRIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.04EaH262WbiN-Ss1p1ABDaYo3dfLu1431YGd-3zg7_s";
+    let date = moment(new Date())
+      .format("L LTS")
+      .replace(/(\/)/g, "-")
+      .replace(/(\AM+)/g, "");
+
+    let info = {
+      id: 1,
+      first_name: values.first_name,
+      last_name: values.last_name,
+      email: values.email,
+      phone_number: "123-456-7890",
+      settings: {
+        notification_method: "Phone"
+      },
+      updated_at: date
+    };
+
+    // let plant = { plant_name: values.plant_name };
+    // console.log("info", JSON.stringify(info));
+
+    const updateInfo = await getAPI("/me", {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer${[token]}`
+      },
+      body: JSON.stringify(info)
+    });
+
+    console.log("updateInfo", updateInfo);
+
+    this.props.navigation.navigate("Profile");
+  };
 
   render() {
-    const { navigation } = this.props;
     return (
       <Form
-        onSubmit={values => this.onSubmit(values)}
-        validate={values => this.validate(values)}
-        render={({ handleSubmit, pristine, invalid }) => (
+        onSubmit={values => this.updateUser(values)}
+        initialValues={this.state.initialValues}
+        render={({ handleSubmit, pristine, invalid, values }) => (
           <View style={styles.formContainer}>
+            {console.log(values)}
             <View>
               <Text style={styles.formTitle}>First Name</Text>
               <Field
-                name="FirstName"
+                name="first_name"
                 render={({ input, meta }) => {
                   return (
                     <TextInput
                       style={styles.formInput}
                       {...input}
-                      placeholder="FirstName"
                       autoCapitalize="none"
                     />
                   );
@@ -45,47 +103,33 @@ export default class EditProfileForm extends Component {
               />
               <Text style={styles.formTitle}>Last Name</Text>
               <Field
-                name="LastName"
+                name="last_name"
                 render={({ input, meta }) => {
                   return (
                     <TextInput
-                      {...input}
                       style={styles.formInput}
-                      placeholder="LastName"
+                      {...input}
                       autoCapitalize="none"
-                    />
-                  );
-                }}
-              />
-              <Text style={styles.formTitle}>Password</Text>
-              <Field
-                name="Password"
-                render={({ input, meta }) => {
-                  return (
-                    <TextInput
-                      {...input}
-                      style={styles.formInput}
-                      placeholder="Password"
                     />
                   );
                 }}
               />
               <Text style={styles.formTitle}>Email</Text>
               <Field
-                name="Email"
+                name="email"
                 render={({ input, meta }) => {
                   return (
                     <TextInput
-                      {...input}
                       style={styles.formInput}
-                      placeholder="Email"
+                      {...input}
+                      autoCapitalize="none"
                     />
                   );
                 }}
               />
               <Text style={styles.formTitle}>Plant Name</Text>
               <Field
-                name="PlantName"
+                name="plant_name"
                 render={({ input, meta }) => {
                   return (
                     <TextInput
@@ -98,19 +142,16 @@ export default class EditProfileForm extends Component {
               />
             </View>
             <TouchableOpacity
-              activeOpacity={0.6}
               style={styles.confirmButton}
-              onPress={() => {
-                navigation.navigate("Profile");
-              }}
+              onPress={() => handleSubmit()}
             >
               <LinearGradient
-                 start={{ x: 0, y: 0 }}
-                 end={{ x: 0, y: 1 }}
-                 colors={[
-                   globalStyles.blueGradientColor.start.color,
-                   globalStyles.blueGradientColor.end.color
-                 ]}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
+                colors={[
+                  globalStyles.blueGradientColor.start.color,
+                  globalStyles.blueGradientColor.end.color
+                ]}
                 style={[
                   StyleSheet.absoluteFill,
                   {

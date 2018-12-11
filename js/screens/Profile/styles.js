@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-around"
   },
   avatar: {
-    resizeMode: 'contain',
+    resizeMode: "contain",
     width: width / 4,
-    height: height / 8,
+    height: height / 8
   },
   accountName: {
     fontFamily: globalStyles.titleFont.fontFamily,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   plant: {
     height: height / 6,
     width: width / 7,
-    resizeMode: "center"
+    resizeMode: "contain"
   },
   plantDescription: {
     fontFamily: globalStyles.textFont.fontFamily,

@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import moment from "moment";
 import {
   Text,
   View,
@@ -13,12 +12,22 @@ import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
 import styles from "./styles";
 
+const myAvatar = {
+  avatar1: require("../../assets/Avatars/beachBear.png"),
+  avatar2: require("../../assets/Avatars/blueYellowBear.png"),
+  avatar3: require("../../assets/Avatars/freshLilacBear.png"),
+  avatar4: require("../../assets/Avatars/greenBear.png"),
+  avatar5: require("../../assets/Avatars/pinkBear.png"),
+  avatar6: require("../../assets/Avatars/saffronBear.png")
+};
+
 export default class ChooseAvatar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       modalVisible: false,
       currAvatar: "",
+      selectedAvatar: "avatar1",
       avatar1: false,
       avatar2: false,
       avatar3: false,
@@ -154,6 +163,9 @@ export default class ChooseAvatar extends Component {
               style={styles.saveButton}
               onPress={() => {
                 this.setModalVisible(!this.state.modalVisible);
+                if (this.state.currAvatar !== "") {
+                  this.setState({ selectedAvatar: this.state.currAvatar });
+                }
               }}
             >
               <LinearGradient
@@ -179,13 +191,14 @@ export default class ChooseAvatar extends Component {
         </Modal>
         <TouchableOpacity
           activeOpacity={0.6}
+          style={styles.mainTouch}
           onPress={() => {
             this.setModalVisible(true);
           }}
         >
           <Image
             style={styles.editAvatar}
-            source={require("../../assets/Avatars/beachBear.png")}
+            source={myAvatar[this.state.selectedAvatar]}
           />
           <Image
             style={styles.cameraIcon}
