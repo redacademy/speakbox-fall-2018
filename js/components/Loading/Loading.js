@@ -25,11 +25,11 @@ export default class Loading extends Component {
     Animated.sequence([
       Animated.timing(this.state.rotation, {
         toValue: 1,
-        duration: 3000,
+        duration: 1000,
       }),
       Animated.timing(this.state.rotation, {
         toValue: 0,
-        duration: 3000,
+        duration: 1000,
       })
     ]).start(() => {
       this.setState({
