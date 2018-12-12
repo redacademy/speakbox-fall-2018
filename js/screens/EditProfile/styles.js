@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     height,
     width,
     alignItems: "center",
-    justifyContent: "space-around"
   },
 });
 

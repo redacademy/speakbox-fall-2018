@@ -8,9 +8,12 @@ import globalStyles from "../../config/styles";
 const FilterButton = props => {
   return (
     <LinearGradient
-      start={{ x: 1, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      colors={["#FBE3D7", "#FFB5BA"]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 0, y: 1 }}
+      colors={[
+        globalStyles.pinkGradientColor.start.color,
+        globalStyles.pinkGradientColor.end.color
+      ]}
       style={styles.filterButton}
     >
       <TouchableOpacity>

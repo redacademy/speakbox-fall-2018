@@ -39,12 +39,12 @@ const ActivityDetails = props => {
               }}
             >
               <LinearGradient
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
                 colors={[
                   globalStyles.blueGradientColor.start.color,
                   globalStyles.blueGradientColor.end.color
                 ]}
-                start={{ x: 1.0, y: 0.0 }}
-                end={{ x: 1.0, y: 1.0 }}
                 style={styles.button}
               >
                 <Text style={styles.buttonTitle}>Do it Now</Text>
@@ -57,12 +57,12 @@ const ActivityDetails = props => {
             </TouchableOpacity>
             <TouchableOpacity>
               <LinearGradient
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
                 colors={[
-                  globalStyles.pinkGradientColor.end.color,
-                  globalStyles.pinkGradientColor.start.color
+                  globalStyles.pinkGradientColor.start.color,
+                  globalStyles.pinkGradientColor.end.color
                 ]}
-                start={{ x: 1.0, y: 0.0 }}
-                end={{ x: 1.0, y: 1.0 }}
                 style={styles.button}
               >
                 <Text style={styles.buttonTitle}>Save for Later</Text>

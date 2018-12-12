@@ -9,27 +9,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around"
   },
+  avatar: {
+    resizeMode: 'contain',
+    width: width / 4,
+    height: height / 8,
+  },
   accountName: {
-    // fontFamily: globalStyles.titleFont.fontFamily,
+    fontFamily: globalStyles.titleFont.fontFamily,
     fontSize: globalStyles.titleFont.fontSize,
     ...globalStyles.greyTextColor,
     letterSpacing: globalStyles.titleFont.letterSpacing
   },
   editAccountButton: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white",
-    backgroundColor: "#FFB5BA",
-    borderRadius: 20,
-    height: 37,
-    width: 168,
+    height: height / 20,
+    width: width / 2.5,
     alignItems: "center",
     justifyContent: "center"
   },
   editAccount: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white"
+    color: "white",
+    textTransform: "uppercase"
   },
   plantContainer: {
     justifyContent: "center",
@@ -46,28 +49,25 @@ const styles = StyleSheet.create({
     resizeMode: "center"
   },
   plantDescription: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
     ...globalStyles.greyTextColor,
     textAlign: "center",
-    paddingLeft: 10,
-    paddingRight: 10
+    width: width / 1.5
   },
   logoutButton: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white",
-    backgroundColor: "#6BCCFD",
-    borderRadius: 20,
-    height: 37,
-    width: 168,
+    height: height / 20,
+    width: width / 2.5,
     alignItems: "center",
     justifyContent: "center"
   },
   logout: {
-    // fontFamily: globalStyles.textFont.fontFamily,
+    fontFamily: globalStyles.textFont.fontFamily,
     fontSize: globalStyles.textFont.fontSize,
-    color: "white"
+    color: "white",
+    textTransform: "uppercase"
   }
 });
 

@@ -3,10 +3,8 @@ const { height, width } = Dimensions.get("window");
 
 const styles = StyleSheet.create({
   header: {
-    position: "relative",
     borderBottomColor: "transparent",
     backgroundColor: "transparent",
-    width: width - 10
   },
   profileIcon: {
     alignSelf: "flex-end",
@@ -14,7 +12,7 @@ const styles = StyleSheet.create({
     height: height / 8,
     resizeMode: "center",
     position: "absolute",
-    top: -40
+    top: -40,
   },
   navIcons: {
     width: width / 12,

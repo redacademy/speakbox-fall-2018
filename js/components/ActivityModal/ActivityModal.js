@@ -20,8 +20,8 @@ const ActivityModal = props => {
           <Text style={styles.title}>ENJOY YOUR ACTIVITY!</Text>
           <Text style={styles.text}>Don't forget to log it after!</Text>
           <LinearGradient
-            start={{ x: 1, y: 0 }}
-            end={{ x: 1, y: 1 }}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 0, y: 1 }}
             colors={[
               globalStyles.blueGradientColor.start.color,
               globalStyles.blueGradientColor.end.color

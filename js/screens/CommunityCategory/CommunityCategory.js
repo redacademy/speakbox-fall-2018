@@ -11,8 +11,8 @@ import globalStyles from "../../config/styles";
 const CommunityCategory = props => {
   return (
     <LinearGradient
-      start={{ x: 1, y: 0 }}
-      end={{ x: 1, y: 1 }}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 0, y: 1 }}
       colors={[
         globalStyles.screenGradientColor.start.color,
         globalStyles.screenGradientColor.end.color

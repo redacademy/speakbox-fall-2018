@@ -6,7 +6,7 @@ export default class EditProfileContainer extends Component {
   render() {
     return (
       <View>
-        <EditProfile />
+        <EditProfile navigation={this.props.navigation} />
       </View>
     );
   }

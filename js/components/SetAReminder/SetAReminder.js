@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import moment from "moment";
 import {
   Text,
   View,
@@ -10,6 +11,7 @@ import {
   DatePickerIOS
 } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import globalStyles from "../../config/styles";
 import styles from "./styles";
 
 class SetAReminder extends Component {
@@ -17,13 +19,12 @@ class SetAReminder extends Component {
     super(props);
     this.state = {
       chosenDate: new Date(),
-      chosenTime: "8:30",
       modalVisible: false,
       reminderSwitch: false
     };
   }
+
   setDate = newDate => {
-    console.log(newDate);
     this.setState({ chosenDate: newDate });
   };
   toggleReminderSwitch = value => {
@@ -34,6 +35,7 @@ class SetAReminder extends Component {
   };
 
   render() {
+    const { navigation } = this.props;
     return (
       <View>
         <Modal
@@ -43,16 +45,25 @@ class SetAReminder extends Component {
         >
           <View style={styles.modalContentContainer}>
             <LinearGradient
-              useAngle={true}
-              angle={180}
-              angleCenter={{ x: 0.5, y: 0.5 }}
-              colors={["#F3E3D8", "#fff"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 0, y: 1 }}
+              colors={[
+                globalStyles.modalGradientColor.start.color,
+                globalStyles.modalGradientColor.end.color
+              ]}
               style={[
                 StyleSheet.absoluteFill,
                 { height: "100%", width: "100%", borderRadius: 10 }
               ]}
             />
-            <Text style={styles.setAReminder}>Set A Reminder</Text>
+            <Text style={styles.setAReminderTitle}>Set A Reminder</Text>
+            {navigation.state.routeName !== "Profile" && (
+              <Text style={styles.habit}>
+                On average, habits take 66 days to form. To help keep you on
+                track, set a daily reminder notification. You can turn this off
+                at anytime.
+              </Text>
+            )}
             <DatePickerIOS
               mode={"time"}
               date={this.state.chosenDate}
@@ -63,11 +74,38 @@ class SetAReminder extends Component {
               style={styles.setReminderButton}
               onPress={() => {
                 this.setModalVisible(!this.state.modalVisible);
-                this.setState({ chosenTime: this.state.chosenDate.toString() });
               }}
             >
+              <LinearGradient
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
+                colors={[
+                  globalStyles.blueGradientColor.start.color,
+                  globalStyles.blueGradientColor.end.color
+                ]}
+                style={[
+                  StyleSheet.absoluteFill,
+                  {
+                    height: "100%",
+                    width: "100%",
+                    borderRadius: 20,
+                    padding: 20
+                  }
+                ]}
+              />
               <Text style={styles.setReminder}>Set Reminder</Text>
             </TouchableOpacity>
+            {navigation.state.routeName !== "Profile" && (
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                  navigation.navigate("DashBoard");
+                }}
+              >
+                <Text style={styles.skip}>Skip</Text>
+              </TouchableOpacity>
+            )}
           </View>
         </Modal>
         <View style={styles.reminderContainer}>
@@ -92,7 +130,7 @@ class SetAReminder extends Component {
               }}
             >
               <Text>Time:</Text>
-              <Text>{this.state.chosenTime}</Text>
+              <Text>{moment(this.state.chosenDate).format("LT")}</Text>
             </TouchableOpacity>
           </View>
         </View>
