@@ -32,7 +32,6 @@ class CommunityTopicContainer extends Component {
         content: comment
       })
     });
-    console.log(res);
   };
 
   getTopics = async () => {
@@ -47,7 +46,6 @@ class CommunityTopicContainer extends Component {
         }
       }
     );
-    console.log(res);
     this.setState({ data: res });
   };
 

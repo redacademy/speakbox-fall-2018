@@ -26,7 +26,8 @@ export default (style = StyleSheet.create({
   filterContainer: {
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: 4
+    marginBottom: 4,
+    padding: 10
   },
   filters: {
     flex: 3,

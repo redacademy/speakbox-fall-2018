@@ -8,14 +8,7 @@ import globalStyles from "../../config/styles";
 const ActivityModal = props => {
   return (
     <React.Fragment>
-      <Modal
-        animationType="fade"
-        onRequestClose={() => {
-          console.log("close");
-        }}
-        visible={props.isVisible}
-        transparent={true}
-      >
+      <Modal animationType="fade" visible={props.isVisible} transparent={true}>
         <View style={styles.modal}>
           <Text style={styles.title}>ENJOY YOUR ACTIVITY!</Text>
           <Text style={styles.text}>Don't forget to log it after!</Text>
