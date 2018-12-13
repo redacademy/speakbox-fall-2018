@@ -41,5 +41,10 @@ const ActivityModal = props => {
     </React.Fragment>
   );
 };
-
+ActivityDetails.propTypes = {
+  activity: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  isVisible: PropTypes.bool.isRequired,
+  toggleVisibility: PropTypes.bool.isRequired
+};
 export default ActivityModal;

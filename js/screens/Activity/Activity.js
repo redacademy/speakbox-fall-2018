@@ -30,20 +30,20 @@ const Activity = props => {
             </View>
             {props.activities && (
               <ScrollView style={styles.carousel} horizontal={true}>
-                {props.activities.map((e, key) => {
+                {props.activities.map((activity, key) => {
                   return (
                     <TouchableOpacity
                       key={key}
                       onPress={() => {
                         props.navigation.navigate("ActivityDetails", {
-                          id: e.id
+                          id: activity.id
                         });
                       }}
                     >
                       <Image
                         style={styles.image}
                         source={{
-                          uri: e.image_url
+                          uri: activity.image_url
                         }}
                       />
                     </TouchableOpacity>
@@ -56,19 +56,19 @@ const Activity = props => {
             </View>
             {props.activities && (
               <ScrollView style={styles.carousel} horizontal={true}>
-                {props.activities.map((e, key) => {
+                {props.activities.map((activity, key) => {
                   return (
                     <TouchableOpacity
                       key={key}
                       onPress={() => {
                         props.navigation.navigate("ActivityDetails", {
-                          id: e.id
+                          id: activity.id
                         });
                       }}
                     >
                       <Image
                         style={styles.image}
-                        source={{ uri: e.image_url }}
+                        source={{ uri: activity.image_url }}
                       />
                     </TouchableOpacity>
                   );
@@ -80,19 +80,19 @@ const Activity = props => {
             </View>
             {props.activities && (
               <ScrollView style={styles.carousel} horizontal={true}>
-                {props.activities.map((e, key) => {
+                {props.activities.map((activity, key) => {
                   return (
                     <TouchableOpacity
                       key={key}
                       onPress={() => {
                         props.navigation.navigate("ActivityDetails", {
-                          id: e.id
+                          id: activity.id
                         });
                       }}
                     >
                       <Image
                         style={styles.image}
-                        source={{ uri: e.image_url }}
+                        source={{ uri: activity.image_url }}
                       />
                     </TouchableOpacity>
                   );
@@ -104,6 +104,10 @@ const Activity = props => {
       </ScrollView>
     </ImageBackground>
   );
+};
+Activity.propTypes = {
+  activities: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
 
 export default Activity;

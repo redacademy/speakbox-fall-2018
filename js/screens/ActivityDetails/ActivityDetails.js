@@ -76,20 +76,20 @@ const ActivityDetails = props => {
           </View>
           {props.allActivities && (
             <ScrollView style={styles.carousel} horizontal={true}>
-              {props.allActivities.map((e, key) => {
+              {props.allActivities.map((activity, key) => {
                 return (
                   <TouchableOpacity
                     key={key}
                     onPress={() => {
                       props.navigation.navigate("ActivityDetails", {
-                        id: e.id
+                        id: activity.id
                       });
                     }}
                   >
                     <Image
                       style={styles.image}
                       source={{
-                        uri: e.image_url
+                        uri: activity.image_url
                       }}
                     />
                   </TouchableOpacity>
@@ -101,6 +101,13 @@ const ActivityDetails = props => {
       </ScrollView>
     </ImageBackground>
   );
+};
+ActivityDetails.propTypes = {
+  activity: PropTypes.object.isRequired,
+  allActivities: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  isVisible: PropTypes.bool.isRequired,
+  toggleVisibility: PropTypes.bool.isRequired
 };
 
 export default ActivityDetails;

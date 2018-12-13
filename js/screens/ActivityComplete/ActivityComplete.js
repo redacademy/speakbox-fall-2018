@@ -58,5 +58,8 @@ const ActivityComplete = props => {
     </ImageBackground>
   );
 };
+ActivityComplete.propTypes = {
+  activity: PropTypes.object.isRequired
+};
 
 export default ActivityComplete;

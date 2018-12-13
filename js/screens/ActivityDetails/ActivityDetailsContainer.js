@@ -41,7 +41,7 @@ export default class ActivityContainer extends Component {
     this.setState({ allActivities: results });
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.getActivity();
     this.getAllActivities();
   }

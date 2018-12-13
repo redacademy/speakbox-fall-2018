@@ -11,11 +11,7 @@ export default class ActivitySlider extends React.Component {
   }
 
   change(value) {
-    this.setState(() => {
-      return {
-        value: parseFloat(value)
-      };
-    });
+    this.setState({ value: parseFloat(value) });
   }
 
   render() {
