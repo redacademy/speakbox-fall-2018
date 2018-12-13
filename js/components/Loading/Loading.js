@@ -26,10 +26,6 @@ export default class Loading extends Component {
       Animated.timing(this.state.rotation, {
         toValue: 1,
         duration: 1000,
-      }),
-      Animated.timing(this.state.rotation, {
-        toValue: 0,
-        duration: 1000,
       })
     ]).start(() => {
       this.setState({
@@ -54,20 +50,22 @@ export default class Loading extends Component {
           colors={["#BADDD6", "#FAE4D9"]}
           style={[StyleSheet.absoluteFill, { height: "100%", width: "100%" }]}
         />
-        <Text style={styles.loadingTitle}>SpeakBox</Text>
         <Animated.View
           style={{
             position: "absolute",
-            top: height / 3.5,
-            right: width / 2 - 50,
+            top: height / 3.75,
+            left: width / 4.6,
             transform: [{ rotate: spin }]
           }}
         >
           <Image
+            source={require("../../assets/Spinner/loadingCircle.png")}
+          />
+        </Animated.View>
+        <Image
             style={styles.logo}
             source={require("../../assets/Icons/SpeakboxLogo.png")}
           />
-        </Animated.View>
       </View>
     );
   }

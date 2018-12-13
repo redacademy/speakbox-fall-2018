@@ -7,17 +7,15 @@ const styles = StyleSheet.create({
     height,
     width,
     alignItems: "center",
-    justifyContent: "space-around"
-  },
-  loadingTitle: {
-    fontFamily: globalStyles.titleFont.fontFamily,
-    fontSize: 30,
-    ...globalStyles.greyTextColor,
-    letterSpacing: globalStyles.titleFont.letterSpacing
+    justifyContent: "center"
   },
   logo: {
-    width: 100,
-    height: 100,
+    resizeMode: "contain",
+    position: "absolute",
+    top: height / 3,
+    left: width / 3,
+    width: width / 3,
+    height: height / 7,
     tintColor: "#5D5D5D"
   }
 });
