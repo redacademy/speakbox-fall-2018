@@ -9,14 +9,13 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     justifyContent: 'space-between',
-    height: height / 5.5
+    height: height / 7.2
   },
+  enterEmail: {
+    color: '#B5ADAD',
+    fontFamily: 'Quicksand'
+  }, 
   usernameInput: {
-    ...globalStyles.inputElements,
-    ...globalStyles.inputBorderShadow,
-    ...globalStyles.inputBoxFont
-  },
-  passwordInput: {
     ...globalStyles.inputElements,
     ...globalStyles.inputBorderShadow,
     ...globalStyles.inputBoxFont
@@ -24,10 +23,7 @@ const styles = StyleSheet.create({
   linkButtonContainer: {
     justifyContent: 'space-evenly',
     height: height / 4
-  },
-  forgotPassword: {
-    ...globalStyles.linksLoginForgotPassword
-  },
+  },	
   button: {
     backgroundColor: '#FFB5BA',
     ...globalStyles.buttonElements
@@ -35,7 +31,7 @@ const styles = StyleSheet.create({
   buttonText: {
     ...globalStyles.buttonText
   },
-  createAccount: {
+  backToLogin: {
     ...globalStyles.linksLoginForgotPassword
   }
 })

@@ -90,9 +90,9 @@ const globalStyles = {
     color: '#FFFF',
     alignSelf: 'center',
     fontFamily: 'Quicksand',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
   }
-
 };
 
 export default globalStyles;
