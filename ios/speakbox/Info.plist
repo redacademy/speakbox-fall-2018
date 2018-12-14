@@ -87,5 +87,11 @@
 		<string>Avenir-Oblique.ttf</string>
 		<string>Avenir-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SpeakBox would like access to your photo gallery</string>
+	<key>NSCameraUsageDescription</key>
+	<string>SpeakBox would like to use your camera</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>SpeakBox would like to save photos to your photo gallery</string>
 </dict>
 </plist>

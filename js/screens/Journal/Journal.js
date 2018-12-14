@@ -1,11 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
 
-const Journal = () => {
+const Journal = props => {
   return (
     <View>
       <Text>Journal</Text>
+      <Button
+        title="Journal"
+        onPress={() => {
+          props.navigation.navigate("JournalEntry");
+        }}
+      />
     </View>
   );
 };
