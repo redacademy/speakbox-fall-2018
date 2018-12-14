@@ -60,6 +60,22 @@
 		E0E5223A455A43B797B4756D /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 479CE5E6BAF24FDB9B055C8D /* MaterialCommunityIcons.ttf */; };
 		E42591AC03304539BCDCC960 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C9159AD95F45DDA47B657B /* libRNVectorIcons-tvOS.a */; };
 		81557D6D40E440B0BD763438 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C15A02211D493284598AC7 /* libRNImagePicker.a */; };
+		672C3B813AE84037A9C2EA6C /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA3EB6DFA21248E0AD5B9758 /* Quicksand-Bold.ttf */; };
+		4F6928EBBF3F402E8A53EFCD /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C95E355B632433A8B71350F /* Quicksand-Light.ttf */; };
+		1CCDB6813B704630B8C71310 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F8997A96CC6491590F794EA /* Quicksand-Medium.ttf */; };
+		2962411DF5C542B2A779BFA7 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BA6EDC459AB4A3B9D4D1601 /* Quicksand-Regular.ttf */; };
+		33490424060C4135A95E1B25 /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58B99251DD874691B03FC189 /* Avenir-Black.ttf */; };
+		32A81F4C5EEA40F6A0339EFF /* Avenir-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A297FD3583FA4234BE037CE3 /* Avenir-BlackOblique.ttf */; };
+		75525E8B7926433A96F3EF75 /* Avenir-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B36C968245DC433B856F75A7 /* Avenir-Book.ttf */; };
+		84AE71C89DEB4FEDBFF3A8FF /* Avenir-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E335363B84164F588FF5357E /* Avenir-BookOblique.ttf */; };
+		43A591D2CDD24A838E59B51B /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476D513DAFE0492B87BF4E6C /* Avenir-Heavy.ttf */; };
+		506E416FCC234181A60010A8 /* Avenir-HeavyOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1103E926E54B34B09D7DD5 /* Avenir-HeavyOblique.ttf */; };
+		58ED4AF695A8493C9B1962B5 /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD6619FCC302437E92B05281 /* Avenir-Light.ttf */; };
+		08538821AC3B427C8E82F34E /* Avenir-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4CB7C6E44F947718BCF0E3B /* Avenir-LightOblique.ttf */; };
+		3389AFA99704475C8C322A98 /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1009981876341A09285D835 /* Avenir-Medium.ttf */; };
+		055E0C0ECD2F44ABAA258085 /* Avenir-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBD9F56CF54B4A68B00EF2E3 /* Avenir-MediumOblique.ttf */; };
+		273EC04D18904E7EA0430604 /* Avenir-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78AF0F1197CB41B6A507DACB /* Avenir-Oblique.ttf */; };
+		94761FEA5F474C40B3377F97 /* Avenir-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED168018A544990A922F308 /* Avenir-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -435,6 +451,22 @@
 		FD03B4CE0F18468B826CB402 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		947EA529B04F4F378F72223D /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNImagePicker.xcodeproj"; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		70C15A02211D493284598AC7 /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CA3EB6DFA21248E0AD5B9758 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; name = "Quicksand-Bold.ttf"; path = "../js/assets/fonts/Quicksand/Quicksand-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5C95E355B632433A8B71350F /* Quicksand-Light.ttf */ = {isa = PBXFileReference; name = "Quicksand-Light.ttf"; path = "../js/assets/fonts/Quicksand/Quicksand-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7F8997A96CC6491590F794EA /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; name = "Quicksand-Medium.ttf"; path = "../js/assets/fonts/Quicksand/Quicksand-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BA6EDC459AB4A3B9D4D1601 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; name = "Quicksand-Regular.ttf"; path = "../js/assets/fonts/Quicksand/Quicksand-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58B99251DD874691B03FC189 /* Avenir-Black.ttf */ = {isa = PBXFileReference; name = "Avenir-Black.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A297FD3583FA4234BE037CE3 /* Avenir-BlackOblique.ttf */ = {isa = PBXFileReference; name = "Avenir-BlackOblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-BlackOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B36C968245DC433B856F75A7 /* Avenir-Book.ttf */ = {isa = PBXFileReference; name = "Avenir-Book.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E335363B84164F588FF5357E /* Avenir-BookOblique.ttf */ = {isa = PBXFileReference; name = "Avenir-BookOblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-BookOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		476D513DAFE0492B87BF4E6C /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; name = "Avenir-Heavy.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C1103E926E54B34B09D7DD5 /* Avenir-HeavyOblique.ttf */ = {isa = PBXFileReference; name = "Avenir-HeavyOblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-HeavyOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD6619FCC302437E92B05281 /* Avenir-Light.ttf */ = {isa = PBXFileReference; name = "Avenir-Light.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4CB7C6E44F947718BCF0E3B /* Avenir-LightOblique.ttf */ = {isa = PBXFileReference; name = "Avenir-LightOblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-LightOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1009981876341A09285D835 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; name = "Avenir-Medium.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CBD9F56CF54B4A68B00EF2E3 /* Avenir-MediumOblique.ttf */ = {isa = PBXFileReference; name = "Avenir-MediumOblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-MediumOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		78AF0F1197CB41B6A507DACB /* Avenir-Oblique.ttf */ = {isa = PBXFileReference; name = "Avenir-Oblique.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Oblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9ED168018A544990A922F308 /* Avenir-Regular.ttf */ = {isa = PBXFileReference; name = "Avenir-Regular.ttf"; path = "../js/assets/fonts/Avenir/Avenir-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +501,7 @@
 				7801CC86CC3046678D4C46B2 /* libc++.tbd in Frameworks */,
 				7D38AB876ED246C2BEC6B4CC /* libz.tbd in Frameworks */,
 				81557D6D40E440B0BD763438 /* libRNImagePicker.a in Frameworks */,
+				DCB71A42134E4C97948D7C98 /* libRNNotifications.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +677,22 @@
 				CD1A0213331F402C814BFF0A /* Octicons.ttf */,
 				4E1CE42B806D42C5BBCCF9A6 /* SimpleLineIcons.ttf */,
 				1B8FC2A8352845B9AC44D14E /* Zocial.ttf */,
+				CA3EB6DFA21248E0AD5B9758 /* Quicksand-Bold.ttf */,
+				5C95E355B632433A8B71350F /* Quicksand-Light.ttf */,
+				7F8997A96CC6491590F794EA /* Quicksand-Medium.ttf */,
+				9BA6EDC459AB4A3B9D4D1601 /* Quicksand-Regular.ttf */,
+				58B99251DD874691B03FC189 /* Avenir-Black.ttf */,
+				A297FD3583FA4234BE037CE3 /* Avenir-BlackOblique.ttf */,
+				B36C968245DC433B856F75A7 /* Avenir-Book.ttf */,
+				E335363B84164F588FF5357E /* Avenir-BookOblique.ttf */,
+				476D513DAFE0492B87BF4E6C /* Avenir-Heavy.ttf */,
+				3C1103E926E54B34B09D7DD5 /* Avenir-HeavyOblique.ttf */,
+				FD6619FCC302437E92B05281 /* Avenir-Light.ttf */,
+				C4CB7C6E44F947718BCF0E3B /* Avenir-LightOblique.ttf */,
+				E1009981876341A09285D835 /* Avenir-Medium.ttf */,
+				CBD9F56CF54B4A68B00EF2E3 /* Avenir-MediumOblique.ttf */,
+				78AF0F1197CB41B6A507DACB /* Avenir-Oblique.ttf */,
+				9ED168018A544990A922F308 /* Avenir-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -734,6 +783,7 @@
 				D7C382CB738C43ABA542CC43 /* RNGestureHandler.xcodeproj */,
 				EBE1D1B004FB41FBB9532A76 /* RealmReact.xcodeproj */,
 				947EA529B04F4F378F72223D /* RNImagePicker.xcodeproj */,
+				0A84BE892C614E5B914655E5 /* RNNotifications.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1309,6 +1359,22 @@
 				12EB73F0724C4798ACFD5E84 /* Octicons.ttf in Resources */,
 				37D74BA8B85B4750B23B0D57 /* SimpleLineIcons.ttf in Resources */,
 				C01546010D28435BB5C494B1 /* Zocial.ttf in Resources */,
+				672C3B813AE84037A9C2EA6C /* Quicksand-Bold.ttf in Resources */,
+				4F6928EBBF3F402E8A53EFCD /* Quicksand-Light.ttf in Resources */,
+				1CCDB6813B704630B8C71310 /* Quicksand-Medium.ttf in Resources */,
+				2962411DF5C542B2A779BFA7 /* Quicksand-Regular.ttf in Resources */,
+				33490424060C4135A95E1B25 /* Avenir-Black.ttf in Resources */,
+				32A81F4C5EEA40F6A0339EFF /* Avenir-BlackOblique.ttf in Resources */,
+				75525E8B7926433A96F3EF75 /* Avenir-Book.ttf in Resources */,
+				84AE71C89DEB4FEDBFF3A8FF /* Avenir-BookOblique.ttf in Resources */,
+				43A591D2CDD24A838E59B51B /* Avenir-Heavy.ttf in Resources */,
+				506E416FCC234181A60010A8 /* Avenir-HeavyOblique.ttf in Resources */,
+				58ED4AF695A8493C9B1962B5 /* Avenir-Light.ttf in Resources */,
+				08538821AC3B427C8E82F34E /* Avenir-LightOblique.ttf in Resources */,
+				3389AFA99704475C8C322A98 /* Avenir-Medium.ttf in Resources */,
+				055E0C0ECD2F44ABAA258085 /* Avenir-MediumOblique.ttf in Resources */,
+				273EC04D18904E7EA0430604 /* Avenir-Oblique.ttf in Resources */,
+				94761FEA5F474C40B3377F97 /* Avenir-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1438,6 +1504,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = speakboxTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1468,6 +1535,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = speakboxTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1499,6 +1567,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = speakbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1525,6 +1594,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = speakbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1558,6 +1628,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = "speakbox-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1596,6 +1667,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = "speakbox-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1633,6 +1705,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = "speakbox-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1670,6 +1743,7 @@
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
 					"$(SRCROOT)/../node_modules/realm/src/**",
 					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-notifications/RNNotifications",
 				);
 				INFOPLIST_FILE = "speakbox-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
