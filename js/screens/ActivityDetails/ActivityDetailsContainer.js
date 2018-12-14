@@ -21,6 +21,7 @@ export default class ActivityContainer extends Component {
 
   toggleVisibility = () => {
     this.setState({ isVisible: !this.state.isVisible });
+
   };
 
   getActivity = async () => {
