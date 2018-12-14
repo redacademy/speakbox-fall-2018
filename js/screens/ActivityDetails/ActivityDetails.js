@@ -11,6 +11,7 @@ import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 import globalStyles from "../../config/styles";
 import ActivityModal from "../../components/ActivityModal";
+import PropTypes from "prop-types";
 
 const ActivityDetails = props => {
   return (
@@ -87,7 +88,7 @@ const ActivityDetails = props => {
                     }}
                   >
                     <Image
-                      style={styles.image}
+                      style={styles.carouselImage}
                       source={{
                         uri: activity.image_url
                       }}

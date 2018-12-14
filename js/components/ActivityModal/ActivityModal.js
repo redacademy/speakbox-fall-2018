@@ -3,6 +3,7 @@ import { View, Text, Modal, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
+import PropTypes from "prop-types";
 
 const ActivityModal = props => {
   return (
@@ -41,8 +42,7 @@ const ActivityModal = props => {
     </React.Fragment>
   );
 };
-ActivityDetails.propTypes = {
-  activity: PropTypes.object.isRequired,
+ActivityModal.propTypes = {
   navigation: PropTypes.object.isRequired,
   isVisible: PropTypes.bool.isRequired,
   toggleVisibility: PropTypes.bool.isRequired

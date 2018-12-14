@@ -8,6 +8,7 @@ import {
   TouchableOpacity
 } from "react-native";
 import styles from "./styles";
+import PropTypes from "prop-types";
 
 const Activity = props => {
   return (

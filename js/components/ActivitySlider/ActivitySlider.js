@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Slider } from "react-native";
 import styles from "./styles";
-
 export default class ActivitySlider extends React.Component {
   constructor(props) {
     super(props);

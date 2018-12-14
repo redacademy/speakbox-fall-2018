@@ -11,6 +11,7 @@ import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 import globalStyles from "../../config/styles";
 import ActivitySlider from "../../components/ActivitySlider";
+import PropTypes from "prop-types";
 
 const ActivityComplete = props => {
   return (
@@ -27,7 +28,7 @@ const ActivityComplete = props => {
             style={styles.image}
             source={require("../../assets/Icons/ribbon2.png")}
           />
-          <Text style={styles.activityTitle}>Go for a walk</Text>
+          <Text style={styles.activityTitle}>{props.activity.title}</Text>
           <View style={styles.profile}>
             <Image
               style={styles.activityImage}
@@ -37,6 +38,17 @@ const ActivityComplete = props => {
           <View style={styles.slider}>
             <Text style={styles.question}>How helpful did you find it?</Text>
             <ActivitySlider />
+            <View style={styles.numbersRating}>
+              <Text style={styles.numbers}>1</Text>
+              <Text style={styles.numbers}>2</Text>
+              <Text style={styles.numbers}>3</Text>
+              <Text style={styles.numbers}>4</Text>
+              <Text style={styles.numbers}>5</Text>
+            </View>
+            <View style={styles.sliderRating}>
+              <Text style={styles.helpful}>Not helpful at all</Text>
+              <Text style={styles.helpful}>Very helpful</Text>
+            </View>
           </View>
           <View>
             <TouchableOpacity>
