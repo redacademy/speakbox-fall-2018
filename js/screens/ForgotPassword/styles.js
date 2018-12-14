@@ -21,6 +21,21 @@ const styles = StyleSheet.create({
   },
   logoHeader: {
     ...globalStyles.titleFontLoginForgotPassword
+  },
+  confirmationContainer: {
+    justifyContent: 'space-between'
+  },  
+  confirmationMessage: {
+    color: '#B5ADAD',
+    fontFamily: 'Quicksand',
+    textAlign: 'center',
+    alignSelf: 'center',
+    width: width / 1.2,
+    height: height / 4
+  },
+  backToLogin: {
+    ...globalStyles.linksLoginForgotPassword,
+    height: height / 2
   }
 })
 
