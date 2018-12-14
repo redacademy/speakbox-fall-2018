@@ -1,13 +1,12 @@
-import React from "react";
+import React, {Fragment} from "react";
 import PropTypes from "prop-types";
-import { Text, View } from "react-native";
 import Loading from "../../components/Loading";
 
 const Journal = () => {
   return (
-    <View>
+    <Fragment>
       <Loading />
-    </View>
+    </Fragment>
   );
 };
 

@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
-  Text,
   View,
   Image,
-  ImageBackground,
-  Easing,
   Animated,
   Dimensions,
   StyleSheet
