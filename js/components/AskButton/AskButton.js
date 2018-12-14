@@ -19,7 +19,9 @@ const AskButton = props => {
       <TouchableOpacity
         style={styles.questionButton}
         onPress={() => {
-          props.navigation.navigate("CommunityQuestion");
+          props.navigation.navigate("CommunityQuestion", {
+            categoryID: props.categoryID
+          });
         }}
       >
         <Text style={styles.questionButtonText}>Ask a question</Text>
@@ -28,6 +30,9 @@ const AskButton = props => {
   );
 };
 
-AskButton.propTypes = {};
+AskButton.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  categoryID: PropTypes.number
+};
 
 export default AskButton;

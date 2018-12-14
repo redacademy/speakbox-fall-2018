@@ -1,37 +1,55 @@
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ImageBackground
+} from "react-native";
 import PropTypes from "prop-types";
-import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 import AskButton from "../../components/AskButton";
 import FilterButton from "../../components/FilterButton/FilterButton";
 import TopicListItem from "../../components/TopicListItem";
-import globalStyles from "../../config/styles";
 
 const CommunityCategory = props => {
   return (
-    <LinearGradient
-      start={{ x: 0, y: 0 }}
-      end={{ x: 0, y: 1 }}
-      colors={[
-        globalStyles.screenGradientColor.start.color,
-        globalStyles.screenGradientColor.end.color
-      ]}
+    <ImageBackground
+      source={require("../../assets/Background/background-1.png")}
       style={styles.linearGradient}
     >
       <View style={styles.container}>
         <View style={styles.topContainer}>
           <Text style={styles.title}>{props.name}</Text>
-          <AskButton navigation={props.navigation} />
+          <AskButton
+            navigation={props.navigation}
+            categoryID={props.categoryID}
+          />
         </View>
         <View style={styles.bottomContainer}>
           <View style={styles.filterContainer}>
             <Text style={styles.sortBy}>Sort By:</Text>
             <View style={styles.filters}>
-              <FilterButton text={"Latest to Oldest"} />
-              <FilterButton text={"Oldest to Latest"} />
-              <FilterButton text={"Unanswered"} />
-              <FilterButton text={"My posts"} />
+              <FilterButton
+                text={"Latest to Oldest"}
+                filterName={"lateToOld"}
+                getPosts={props.getPosts}
+              />
+              <FilterButton
+                text={"Oldest to Latest"}
+                filterName={"oldToLate"}
+                getPosts={props.getPosts}
+              />
+              <FilterButton
+                text={"Unanswered"}
+                filterName={"unanswered"}
+                getPosts={props.getPosts}
+              />
+              <FilterButton
+                text={"My posts"}
+                filterName={"mine"}
+                getPosts={props.getPosts}
+              />
             </View>
           </View>
           {props.topics && (
@@ -53,10 +71,16 @@ const CommunityCategory = props => {
           )}
         </View>
       </View>
-    </LinearGradient>
+    </ImageBackground>
   );
 };
 
-CommunityCategory.propTypes = {};
+CommunityCategory.propTypes = {
+  categoryID: PropTypes.number.isRequired,
+  getPosts: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  navigation: PropTypes.object.isRequired,
+  topics: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+};
 
 export default CommunityCategory;
