@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, Text, Image, ImageBackground } from 'react-native'
-import LoginForm from '../../components/LoginForm'
+import SigninForm from '../../components/SigninForm'
 import styles from './styles'
 
-const UserLogin = () => {
+const UserSignin = () => {
   return (
     <ImageBackground
       source={require('../../assets/Background/background.png')}
@@ -17,10 +17,10 @@ const UserLogin = () => {
           />
           <Text style={styles.logoHeader}>Speakbox</Text>
         </View>
-        <LoginForm />
+        <SigninForm />
       </View>
     </ImageBackground>
   )
 }
 
-export default UserLogin
+export default UserSignin

@@ -4,7 +4,7 @@ import getAPI from '../../config/api'
 import { Form, Field } from 'react-final-form'
 import styles from './styles'
 
-export default class LoginForm extends Component {
+export default class SigninForm extends Component {
   callingAPI = async values => {
     const res = await getAPI('/auth/login', {
       method: 'POST',
