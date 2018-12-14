@@ -5,9 +5,9 @@ import { UserProvider } from "./context/UserContext";
 export default class App extends Component {
   render() {
     return (
-     <UserProvider>
+      <UserProvider>
         <AppNavigator />
-     </UserProvider>
+      </UserProvider>
     );
   }
 }

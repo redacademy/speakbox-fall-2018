@@ -45,6 +45,6 @@ const ActivityModal = props => {
 ActivityModal.propTypes = {
   navigation: PropTypes.object.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  toggleVisibility: PropTypes.bool.isRequired
+  toggleVisibility: PropTypes.oneOfType([PropTypes.bool, PropTypes.func])
 };
 export default ActivityModal;
