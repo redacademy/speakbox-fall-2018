@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
     height
   },
   activityImage: {
-    height: height / 5,
+    height: height / 3,
     width: width / 1.3,
     alignSelf: "center"
   },
   container: {
     flex: 1,
-    height: height * 1.3
+    height: height * 1.5
   },
   title: {
     fontSize: 25,
@@ -20,10 +20,13 @@ const styles = StyleSheet.create({
     fontWeight: "300"
   },
   activityTitle: {
-    textAlign: "center"
+    textAlign: "center",
+    marginVertical: 10,
+    fontWeight: "300"
   },
   question: {
-    textAlign: "center"
+    textAlign: "center",
+    marginVertical: 10
   },
   description: {
     alignSelf: "center",
@@ -55,8 +58,8 @@ const styles = StyleSheet.create({
     lineHeight: 15 * 1.5
   },
   image: {
-    width: width / 1.5,
-    height: height / 2,
+    width: width / 3,
+    height: height / 2.5,
     resizeMode: "contain",
     alignSelf: "center"
   },
@@ -67,6 +70,27 @@ const styles = StyleSheet.create({
     width: width / 1.3,
     justifyContent: "center",
     alignSelf: "center"
+  },
+  sliderRating: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: width / 1.25,
+    marginVertical: 5
+  },
+  helpful: {
+    fontSize: 10,
+    width: width / 6,
+    textAlign: "center"
+  },
+  numbersRating: {
+    flexDirection: "row",
+    width: width / 1.3,
+    justifyContent: "space-between",
+    marginVertical: 5
+  },
+  numbers: {
+    fontSize: 10,
+    textAlign: "center"
   }
 });
 export default styles;

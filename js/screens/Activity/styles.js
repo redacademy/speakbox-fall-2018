@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
   },
   image: {
     marginRight: 10,
-    width: width / 1.3,
-    height: height / 5.2
+    height: height / 4,
+    width: width / 1.3
   }
 });
 export default styles;

@@ -6,14 +6,14 @@ const styles = StyleSheet.create({
     height: height
   },
   activityImage: {
-    height: height / 5,
-    width: width / 1.3,
+    height: height / 3,
+    width: width / 1.2,
     alignSelf: "center"
   },
   container: {
     flex: 1,
     justifyContent: "space-evenly",
-    height: height * 1.2
+    height: height * 1.5
   },
   title: {
     fontSize: 25,
@@ -58,6 +58,12 @@ const styles = StyleSheet.create({
   },
   time: {
     fontWeight: "700"
+  },
+  carouselImage: {
+    height: height / 3,
+    width: width / 1.2,
+    alignSelf: "center",
+    marginRight: 10
   }
 });
 export default styles;
