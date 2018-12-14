@@ -16,13 +16,21 @@ const FilterButton = props => {
       ]}
       style={styles.filterButton}
     >
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          props.getPosts(props.filterName);
+        }}
+      >
         <Text style={styles.filterButtonText}>{props.text}</Text>
       </TouchableOpacity>
     </LinearGradient>
   );
 };
 
-FilterButton.propTypes = {};
+FilterButton.propTypes = {
+  filterName: PropTypes.string.isRequired,
+  getPosts: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default FilterButton;
