@@ -3,6 +3,7 @@ package com.speakbox;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.imagepicker.ImagePickerPackage;
 import com.wix.reactnativenotifications.RNNotificationsPackage;
 import io.realm.react.RealmReactPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ImagePickerPackage(),
             new RNNotificationsPackage(),
             new RealmReactPackage(),
             new RNGestureHandlerPackage(),
