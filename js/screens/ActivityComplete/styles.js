@@ -2,8 +2,8 @@ import { StyleSheet, Dimensions } from "react-native";
 const { height, width } = Dimensions.get("window");
 const styles = StyleSheet.create({
   background: {
-    width: width,
-    height: height
+    width,
+    height
   },
   activityImage: {
     height: height / 5,
@@ -12,15 +12,18 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: "space-evenly",
-    height: height * 1.2
+    height: height * 1.3
   },
   title: {
     fontSize: 25,
-    alignSelf: "center",
-    fontWeight: "300",
-    marginTop: 15,
-    marginBottom: 15
+    textAlign: "center",
+    fontWeight: "300"
+  },
+  activityTitle: {
+    textAlign: "center"
+  },
+  question: {
+    textAlign: "center"
   },
   description: {
     alignSelf: "center",
@@ -52,12 +55,18 @@ const styles = StyleSheet.create({
     lineHeight: 15 * 1.5
   },
   image: {
-    marginRight: 10,
-    width: width / 1.3,
-    height: height / 5.2
+    width: width / 1.5,
+    height: height / 2,
+    resizeMode: "contain",
+    alignSelf: "center"
   },
   time: {
     fontWeight: "700"
+  },
+  slider: {
+    width: width / 1.3,
+    justifyContent: "center",
+    alignSelf: "center"
   }
 });
 export default styles;

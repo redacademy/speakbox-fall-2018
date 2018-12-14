@@ -4,6 +4,7 @@ import CommunityScreen from "../screens/Community";
 import JournalScreen from "../screens/Journal";
 import DashBoardScreen from "../screens/Dashboard";
 import ActivityDetailsScreen from "../screens/ActivityDetails";
+import ActivityCompleteScreen from "../screens/ActivityComplete";
 import ProfileScreen from "../screens/Profile";
 import EditProfileScreen from "../screens/EditProfile";
 import CommunityCategoryScreen from "../screens/CommunityCategory";
@@ -42,6 +43,7 @@ const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen,
     ActivityDetails: ActivityDetailsScreen,
+    ActivityComplete: ActivityCompleteScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },
@@ -126,7 +128,7 @@ export default createBottomTabNavigator(
         fontSize: 10
       },
       style: {
-        backgroundColor: "white"
+        backgroundColor: "#fff"
       }
     }
   }
