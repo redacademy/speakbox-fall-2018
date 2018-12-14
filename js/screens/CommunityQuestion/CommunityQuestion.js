@@ -5,6 +5,7 @@ import CommunityQuestionForm from "../../components/CommunityQuesitonForm";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 import globalStyles from "../../config/styles";
+import CrisisModal from "../../components/CrisisModal";
 
 const CommunityQuestion = props => {
   return (
@@ -18,7 +19,7 @@ const CommunityQuestion = props => {
       style={styles.linearGradient}
     >
       <ScrollView>
-        <View style={styles.container}>
+        <View style={props.isVisible ? styles.dimContainer : styles.container}>
           <Text style={styles.title}>Ask a question</Text>
           <LinearGradient
             start={{ x: 1, y: 0 }}
@@ -26,11 +27,19 @@ const CommunityQuestion = props => {
             colors={["#FAD961", "#EFCC4C"]}
             style={styles.crisisButton}
           >
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                props.toggleVisibility();
+              }}
+            >
               <Text style={styles.crisisText}>I'm in a crisis</Text>
             </TouchableOpacity>
           </LinearGradient>
 
+          <CrisisModal
+            toggleVisibility={props.toggleVisibility}
+            isVisible={props.isVisible}
+          />
           <CommunityQuestionForm navigation={props.navigation} />
         </View>
       </ScrollView>
