@@ -13,9 +13,6 @@ class CommunityCommentModal extends Component {
     return (
       <Modal
         animationType="slide"
-        onRequestClose={() => {
-          console.log("close");
-        }}
         visible={this.props.isVisible}
         transparent={true}
       >

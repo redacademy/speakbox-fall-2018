@@ -9,6 +9,15 @@ export default (style = StyleSheet.create({
     justifyContent: "space-around",
     padding: 10
   },
+
+  dimContainer: {
+    flex: 1,
+    justifyContent: "space-around",
+    padding: 10,
+    backgroundColor: "#A3A3A3",
+    opacity: 0.42
+  },
+
   title: {
     fontSize: globalStyles.titleFont.fontSize,
     ...globalStyles.greyTextColor,
