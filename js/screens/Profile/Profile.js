@@ -24,13 +24,8 @@ const Profile = ({ navigation }) => {
       <ScrollView>
         <View style={styles.profileContainer}>
           <Image
-<<<<<<< HEAD
             style={styles.avatar}
             source={require("../../assets/Avatars/beachBear.png")}
-=======
-            style={{ width: 120, height: 120 }}
-            source={{ uri: "https://speakbox.ca/images/logo.png" }}
->>>>>>> add Loading Component with animation
           />
           <Text style={styles.accountName}>Account Name</Text>
           <TouchableOpacity
@@ -41,18 +36,12 @@ const Profile = ({ navigation }) => {
             }}
           >
             <LinearGradient
-<<<<<<< HEAD
               start={{ x: 0, y: 0 }}
               end={{ x: 0, y: 1 }}
               colors={[
                 globalStyles.pinkGradientColor.start.color,
                 globalStyles.pinkGradientColor.end.color
               ]}
-=======
-             start={{ x: 0, y: 0 }}
-             end={{ x: 0, y: 1 }}
-              colors={["#FEC5C4", "#FFB5BA"]}
->>>>>>> add Loading Component with animation
               style={[
                 StyleSheet.absoluteFill,
                 {
@@ -91,11 +80,7 @@ const Profile = ({ navigation }) => {
           <Text style={styles.plantDescription}>
             [Plant Name] is [number] journal entries away from sprouting a bud!
           </Text>
-<<<<<<< HEAD
           <SetAReminder navigation={navigation} />
-=======
-          <SetAReminder navigation={navigation}/>
->>>>>>> add Loading Component with animation
           <TouchableOpacity
             activeOpacity={0.6}
             style={styles.logoutButton}
@@ -104,14 +89,10 @@ const Profile = ({ navigation }) => {
             <LinearGradient
               start={{ x: 0, y: 0 }}
               end={{ x: 0, y: 1 }}
-<<<<<<< HEAD
               colors={[
                 globalStyles.blueGradientColor.start.color,
                 globalStyles.blueGradientColor.end.color
               ]}
-=======
-              colors={["#A4E8FF", "#6BCCFD"]}
->>>>>>> add Loading Component with animation
               style={[
                 StyleSheet.absoluteFill,
                 {
