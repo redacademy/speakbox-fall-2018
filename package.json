@@ -9,13 +9,11 @@
   "dependencies": {
     "final-form": "^4.11.0",
     "moment": "^2.22.2",
-    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-final-form": "^4.0.2",
     "react-native": "0.57.7",
     "react-native-chart-kit": "^1.2.1",
     "react-native-gesture-handler": "^1.0.10",
-    "react-native-image-picker": "^0.27.2",
     "react-native-linear-gradient": "^2.5.3",
     "react-native-onboarding-swiper": "^0.10.0",
     "react-native-vector-icons": "^6.1.0",
