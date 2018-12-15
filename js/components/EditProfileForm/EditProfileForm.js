@@ -25,8 +25,6 @@ export default class EditProfileForm extends Component {
   }
 
   getUser = async values => {
-    const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE1NDQ3NDQ3OTQsImV4cCI6MTU0NDc0ODM5NCwibmJmIjoxNTQ0NzQ0Nzk0LCJqdGkiOiJ3aFJiUW1iMDNwSHpOZFJRIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.04EaH262WbiN-Ss1p1ABDaYo3dfLu1431YGd-3zg7_s";
     const response = await getAPI("/me", {
       method: "GET",
       headers: {
@@ -44,9 +42,7 @@ export default class EditProfileForm extends Component {
   };
 
   updateUser = async values => {
-    const token =
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvcmVnaXN0ZXIiLCJpYXQiOjE1NDQ3NDQ3OTQsImV4cCI6MTU0NDc0ODM5NCwibmJmIjoxNTQ0NzQ0Nzk0LCJqdGkiOiJ3aFJiUW1iMDNwSHpOZFJRIiwic3ViIjo3LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.04EaH262WbiN-Ss1p1ABDaYo3dfLu1431YGd-3zg7_s";
-    let date = moment(new Date())
+   let date = moment(new Date())
       .format("L LTS")
       .replace(/(\/)/g, "-")
       .replace(/(\AM+)/g, "");
@@ -63,9 +59,6 @@ export default class EditProfileForm extends Component {
       updated_at: date
     };
 
-    // let plant = { plant_name: values.plant_name };
-    // console.log("info", JSON.stringify(info));
-
     const updateInfo = await getAPI("/me", {
       method: "PUT",
       headers: {
@@ -73,8 +66,6 @@ export default class EditProfileForm extends Component {
       },
       body: JSON.stringify(info)
     });
-
-    console.log("updateInfo", updateInfo);
 
     this.props.navigation.navigate("Profile");
   };
@@ -86,7 +77,6 @@ export default class EditProfileForm extends Component {
         initialValues={this.state.initialValues}
         render={({ handleSubmit, pristine, invalid, values }) => (
           <View style={styles.formContainer}>
-            {console.log(values)}
             <View>
               <Text style={styles.formTitle}>First Name</Text>
               <Field
