@@ -4,6 +4,10 @@ import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
 import PropTypes from "prop-types";
+<<<<<<< HEAD
+=======
+
+>>>>>>> add propTypes to activity screens
 
 const ActivityModal = props => {
   return (
@@ -43,6 +47,10 @@ const ActivityModal = props => {
   );
 };
 ActivityModal.propTypes = {
+<<<<<<< HEAD
+=======
+  activity: PropTypes.object.isRequired,
+>>>>>>> add propTypes to activity screens
   navigation: PropTypes.object.isRequired,
   isVisible: PropTypes.bool.isRequired,
   toggleVisibility: PropTypes.bool.isRequired

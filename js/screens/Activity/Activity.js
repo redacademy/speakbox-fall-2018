@@ -7,6 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity
 } from "react-native";
+import PropTypes from "prop-types";
 import styles from "./styles";
 import PropTypes from "prop-types";
 
