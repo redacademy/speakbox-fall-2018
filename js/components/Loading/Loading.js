@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {
-  View,
-  Image,
-  Animated,
-  Dimensions,
-  StyleSheet
-} from "react-native";
+import { View, Image, Animated, Dimensions, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
+import globalStyles from "../../config/styles";
 const { height, width } = Dimensions.get("window");
 
 export default class Loading extends Component {
@@ -22,7 +17,7 @@ export default class Loading extends Component {
     Animated.sequence([
       Animated.timing(this.state.rotation, {
         toValue: 1,
-        duration: 1000,
+        duration: 1000
       })
     ]).start(() => {
       this.setState({
@@ -44,8 +39,11 @@ export default class Loading extends Component {
         <LinearGradient
           start={{ x: 0, y: 0 }}
           end={{ x: 0, y: 0.8 }}
-          colors={["#BADDD6", "#FAE4D9"]}
-          style={[StyleSheet.absoluteFill, { height: "100%", width: "100%" }]}
+          colors={[
+            globalStyles.screenGradientColor.start.color,
+            globalStyles.screenGradientColor.end.color
+          ]}
+          style={[StyleSheet.absoluteFill, { height, width }]}
         />
         <Animated.View
           style={{
@@ -55,14 +53,12 @@ export default class Loading extends Component {
             transform: [{ rotate: spin }]
           }}
         >
-          <Image
-            source={require("../../assets/Spinner/loadingCircle.png")}
-          />
+          <Image source={require("../../assets/Spinner/loadingCircle.png")} />
         </Animated.View>
         <Image
-            style={styles.logo}
-            source={require("../../assets/Icons/SpeakboxLogo.png")}
-          />
+          style={styles.logo}
+          source={require("../../assets/Icons/SpeakboxLogo.png")}
+        />
       </View>
     );
   }

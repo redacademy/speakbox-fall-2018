@@ -12,10 +12,6 @@ import styles from "./styles";
 import globalStyles from "../../config/styles";
 import ActivitySlider from "../../components/ActivitySlider";
 import PropTypes from "prop-types";
-<<<<<<< HEAD
-=======
-
->>>>>>> add propTypes to activity screens
 
 const ActivityComplete = props => {
   return (

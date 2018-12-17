@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import PropTypes from "prop-types";
 import styles from "./styles";
-import PropTypes from "prop-types";
 
 const Activity = props => {
   return (
