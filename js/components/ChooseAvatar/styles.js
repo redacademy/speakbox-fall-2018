@@ -27,6 +27,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center"
   },
+  mainTouch: {
+    borderWidth: 5,
+    borderColor: "#EAE3D9",
+    borderRadius: 80
+  },
   touch: {
     borderWidth: 1,
     borderColor: "#64BEBD",
@@ -51,20 +56,24 @@ const styles = StyleSheet.create({
     height: height / 9
   },
   editAvatar: {
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 15,
+    marginBottom: 15,
     resizeMode: "contain",
     width: width / 4,
     height: height / 8
   },
   cameraIcon: {
     resizeMode: "contain",
-    width: 40,
-    height: 40,
+    width: width / 12,
+    height: height/ 25,
     position: "absolute",
-    bottom: -5,
-    right: -10,
+    bottom: 0,
+    right: 0,
     tintColor: "#fff",
     backgroundColor: "#FDCCC8",
-    borderRadius: 20
+    borderRadius: 10
   },
   saveButton: {
     fontFamily: globalStyles.textFont.fontFamily,
