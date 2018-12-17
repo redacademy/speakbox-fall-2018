@@ -1,8 +1,15 @@
 import React from "react";
-import ActivityScreen from "../screens/Activity/Activity";
-import CommunityScreen from "../screens/Community/Community";
-import JournalScreen from "../screens/Journal/Journal";
-import DashBoardScreen from "../screens/Dashboard/Dashboard";
+import ActivityScreen from "../screens/Activity";
+import CommunityScreen from "../screens/Community";
+import JournalScreen from "../screens/Journal";
+import DashBoardScreen from "../screens/Dashboard";
+import ActivityDetailsScreen from "../screens/ActivityDetails";
+import ActivityCompleteScreen from "../screens/ActivityComplete";
+import ProfileScreen from "../screens/Profile";
+import EditProfileScreen from "../screens/EditProfile";
+import CommunityCategoryScreen from "../screens/CommunityCategory";
+import CommunityQuestionScreen from "../screens/CommunityQuestion";
+import CommunityTopicScreen from "../screens/CommunityTopic";
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,
@@ -11,9 +18,34 @@ import {
 import { Image } from "react-native";
 import styles from "./styles";
 
+const ProfileStack = createStackNavigator(
+  {
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const EditProfileStack = createStackNavigator(
+  {
+    EditProfile: EditProfileScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 const ActivityStack = createStackNavigator(
   {
-    Activity: ActivityScreen
+    Activity: ActivityScreen,
+    ActivityDetails: ActivityDetailsScreen,
+    ActivityComplete: ActivityCompleteScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -23,8 +55,14 @@ const ActivityStack = createStackNavigator(
 );
 const CommunityStack = createStackNavigator(
   {
-    Community: CommunityScreen
+    Community: CommunityScreen,
+    CommunityCategory: CommunityCategoryScreen,
+    CommunityQuestion: CommunityQuestionScreen,
+    CommunityTopic: CommunityTopicScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
+
   {
     defaultNavigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
@@ -33,7 +71,9 @@ const CommunityStack = createStackNavigator(
 );
 const JournalStack = createStackNavigator(
   {
-    Journal: JournalScreen
+    Journal: JournalScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -43,7 +83,9 @@ const JournalStack = createStackNavigator(
 );
 const DashBoardStack = createStackNavigator(
   {
-    DashBoard: DashBoardScreen
+    DashBoard: DashBoardScreen,
+    Profile: ProfileScreen,
+    EditProfile: EditProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -80,14 +122,13 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeTintColor: "black",
-      inactiveTintColor: "#999",
+      activeBackgroundColor: "#efefef",
       showLabel: false,
       labelStyle: {
         fontSize: 10
       },
       style: {
-        backgroundColor: "white"
+        backgroundColor: "#fff"
       }
     }
   }

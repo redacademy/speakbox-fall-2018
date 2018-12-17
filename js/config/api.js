@@ -17,3 +17,4 @@ const getAPI = (path, headerConfig) => {
 }
 
 export default getAPI
+

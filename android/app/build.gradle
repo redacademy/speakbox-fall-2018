@@ -138,6 +138,7 @@ android {
 
 dependencies {
     compile project(':react-native-image-picker')
+    compile project(':react-native-notifications')
     compile project(':realm')
     compile project(':react-native-gesture-handler')
     compile project(':react-native-vector-icons')
