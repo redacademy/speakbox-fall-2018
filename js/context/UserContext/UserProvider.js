@@ -3,7 +3,12 @@ import {
   queryAddUserToken,
   queryRemoveUserToken,
   queryUpdateUser,
-  queryGetUser
+  queryGetUser,
+  queryAddActivity,
+  queryRemoveActivity,
+  queryAddJournal,
+  queryRemoveJournal,
+  queryFirstTime
 } from "../../config/models";
 
 const UserContext = React.createContext();
@@ -30,25 +35,38 @@ class UserProvider extends Component {
     this.getUser();
   };
 
-  updateUser = async (
-    plantName,
-    avatar,
-    streak,
-    savedActivityID,
-    activityRating
-  ) => {
-    await queryUpdateUser(
-      plantName,
-      avatar,
-      streak,
-      savedActivityID,
-      activityRating
-    );
+  updateUser = async (avatar, plantName) => {
+    await queryUpdateUser(avatar, plantName);
     this.getUser();
   };
 
   getUser = () => {
     this.setState({ user: queryGetUser() });
+  };
+
+  addActivity = async (activityID, activityRating, dateRecorded) => {
+    await queryAddActivity(activityID, activityRating, dateRecorded);
+    this.getUser();
+  };
+
+  removeActivity = async activityID => {
+    await queryRemoveActivity(activityID);
+    this.getUser();
+  };
+
+  addJournal = async (journalID, imageUrl, hashTags) => {
+    await queryAddJournal(journalID, imageUrl, hashTags);
+    this.getUser();
+  };
+
+  removeJournal = async journalID => {
+    await queryRemoveJournal(journalID);
+    this.getUser();
+  };
+
+  firstTime = async (showOnBoarding, showPrivacyPolicy) => {
+    await queryFirstTime(showOnBoarding, showPrivacyPolicy);
+    this.getUser();
   };
 
   render() {
@@ -59,7 +77,12 @@ class UserProvider extends Component {
           addUserToken: this.addUserToken,
           removeUserToken: this.removeUserToken,
           updateUser: this.updateUser,
-          getUser: this.getUser
+          getUser: this.getUser,
+          addActivity: this.addActivity,
+          removeActivity: this.removeActivity,
+          addJournal: this.addJournal,
+          removeJournal: this.removeJournal,
+          firstTime: this.firstTime
         }}
       >
         {this.props.children}

@@ -60,7 +60,6 @@ const globalStyles = {
     color: "#fff"
   },
 
-
   inputElements: {
     justifyContent: 'flex-start',
     borderWidth: 1,

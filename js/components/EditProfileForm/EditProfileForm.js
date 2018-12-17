@@ -4,7 +4,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
+  StyleSheet
 } from "react-native";
 import getAPI from "../../config/api";
 import { Form, Field } from "react-final-form";
@@ -25,6 +25,8 @@ export default class EditProfileForm extends Component {
   }
 
   getUser = async values => {
+    const token =
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NDUwODg1MzYsImV4cCI6MTU0NTA5MjEzNiwibmJmIjoxNTQ1MDg4NTM2LCJqdGkiOiJjWkVEUUNIOUhCQThuRm5CIiwic3ViIjoxMSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.dl5rMAt8pZbSjWi78n9G_38truTTvcEqAV34XLLIn-M";
     const response = await getAPI("/me", {
       method: "GET",
       headers: {
@@ -35,14 +37,16 @@ export default class EditProfileForm extends Component {
     this.setState({
       initialValues: {
         first_name: response.data.first_name,
-        last_name: response.data.first_name,
+        last_name: response.data.last_name,
         email: response.data.email
       }
     });
   };
 
   updateUser = async values => {
-   let date = moment(new Date())
+    const token =
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpLnNwZWFrYm94LXN0YWdpbmcuY2FcL2FwaVwvYXV0aFwvbG9naW4iLCJpYXQiOjE1NDUwODg1MzYsImV4cCI6MTU0NTA5MjEzNiwibmJmIjoxNTQ1MDg4NTM2LCJqdGkiOiJjWkVEUUNIOUhCQThuRm5CIiwic3ViIjoxMSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.dl5rMAt8pZbSjWi78n9G_38truTTvcEqAV34XLLIn-M";
+    let date = moment(new Date())
       .format("L LTS")
       .replace(/(\/)/g, "-")
       .replace(/(\AM+)/g, "");
