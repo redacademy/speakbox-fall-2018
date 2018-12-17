@@ -42,10 +42,14 @@ export default class SignupForm extends Component {
   }
 
   render() {
+    const { navigation } = this.props
     return (
       <ScrollView>
         <Form
-          onSubmit={values => this.onSubmit(values)}
+          onSubmit={values => {
+            this.onSubmit(values)
+            navigation.navigate('Signin')
+          }}
           validate={values => this.validate(values)}
           render={({ handleSubmit, pristine, invalid }) => (
             <View style={styles.formContainer}>
@@ -89,7 +93,6 @@ export default class SignupForm extends Component {
                     render={({ input, meta }) => {
                       return (
                         <TextInput
-                          secureTextEntry={true}
                           {...input}
                           autoCapitalize='none'
                           style={{ fontFamily: 'Avenir' }}

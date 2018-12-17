@@ -1,8 +1,14 @@
 import React from 'react'
-import { View, Text, Image, ImageBackground } from 'react-native'
+import {
+  View,
+  Text,
+  Image,
+  ImageBackground,
+  TouchableOpacity
+} from 'react-native'
 import styles from './styles'
 
-const ForgotPasswordConfirmation = () => {
+const ForgotPasswordConfirmation = ({ navigation }) => {
   return (
     <ImageBackground
       source={require('../../assets/Background/background.png')}
@@ -20,7 +26,14 @@ const ForgotPasswordConfirmation = () => {
             log in to your account with your temporary password and change your
             password through your account settings.
           </Text>
-          <Text style={styles.backToLogin}>Back to login</Text>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() => {
+              navigation.navigate('Signin')
+            }}
+          >
+            <Text style={styles.backToLogin}>Back to login</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </ImageBackground>

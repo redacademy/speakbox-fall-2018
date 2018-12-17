@@ -3,6 +3,6 @@ import UserSignup from './UserSignup'
 
 export default class UserSignupContainer extends Component {
   render() {
-    return <UserSignup  />
+    return <UserSignup navigation={this.props.navigation} />
   }
 }

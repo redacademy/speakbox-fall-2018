@@ -4,7 +4,7 @@ import SignupForm from '../../components/SignupForm'
 import ChooseAvatar from '../../components/ChooseAvatar'
 import styles from './styles'
 
-const UserSignup = () => {
+const UserSignup = ({ navigation }) => {
   return (
     <ImageBackground
       source={require('../../assets/Background/background-1.png')}
@@ -14,7 +14,7 @@ const UserSignup = () => {
         <View style={styles.signupAvatar}>
           <ChooseAvatar />
         </View>
-        <SignupForm />
+        <SignupForm navigation={navigation} />
       </View>
     </ImageBackground>
   )
