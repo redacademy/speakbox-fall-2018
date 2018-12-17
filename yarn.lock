@@ -659,19 +659,6 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@expo/websql/-/websql-1.0.1.tgz#fff0cf9c1baa1f70f9e1d658b7c39a420d9b10a9"
   integrity sha1-//DPnBuqH3D54dZYt8OaQg2bEKk=
-
-  dependencies:
-    argsarray "^0.0.1"
-    immediate "^3.2.2"
-    noop-fn "^1.0.0"
-    pouchdb-collections "^1.0.1"
-    tiny-queue "^0.2.1"
-
-"@react-navigation/core@3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.0.1.tgz#9c513c65ae64aa8dee2777f66f547d488905140b"
-  integrity sha512-bJgQHGhtczCmnfIibKuOjgSucLb6rJiz/EbpgqpCHLWg64D94OVEig7uQesmynCiaas1MN1FDSX2hrh2IB3kVw==
-
   dependencies:
     argsarray "^0.0.1"
     immediate "^3.2.2"
@@ -4801,15 +4788,9 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
     minimist "0.0.8"
 
 moment@^2.22.2:
-
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
-
   version "2.23.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.23.0.tgz#759ea491ac97d54bac5ad776996e2a58cc1bc225"
   integrity sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
-
 
 morgan@^1.9.0:
   version "1.9.1"
@@ -5664,17 +5645,6 @@ react-native-scrollable-tab-view@^0.8.0:
     create-react-class "^15.6.2"
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.3"
-
-
-react-native-scrollable-tab-view@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-0.8.0.tgz#5cb1fcfce07bf530a3c81ab51fc5071144edac5c"
-  integrity sha512-8Q7v4f1WyV5cKqvV3QHxnLFRWV8gi24JW2T+Cfx++b3ctHxtJCkGg5Zs15ufYMxaN4W68iDkJrftVVAq0tqb8w==
-  dependencies:
-    create-react-class "^15.6.2"
-    prop-types "^15.6.0"
-    react-timer-mixin "^0.13.3"
-
 
 react-native-svg@6.2.2:
   version "6.2.2"
