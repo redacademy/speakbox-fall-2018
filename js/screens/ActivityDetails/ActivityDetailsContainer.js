@@ -17,6 +17,7 @@ export default class ActivityContainer extends Component {
     headerStyle: {
       ...globalStyles.navigationHeader
     }
+  };
   toggleVisibility = () => {
     this.setState({ isVisible: !this.state.isVisible });
   };
