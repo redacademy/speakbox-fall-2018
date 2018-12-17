@@ -104,11 +104,11 @@ const ActivityDetails = props => {
   );
 };
 ActivityDetails.propTypes = {
-  activity: PropTypes.object.isRequired,
-  allActivities: PropTypes.object.isRequired,
+  activity: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  allActivities: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   navigation: PropTypes.object.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  toggleVisibility: PropTypes.bool.isRequired
+  toggleVisibility: PropTypes.oneOfType([PropTypes.bool, PropTypes.func])
 };
 
 export default ActivityDetails;

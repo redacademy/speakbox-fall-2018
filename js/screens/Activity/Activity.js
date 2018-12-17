@@ -107,7 +107,7 @@ const Activity = props => {
   );
 };
 Activity.propTypes = {
-  activities: PropTypes.object.isRequired,
+  activities: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   navigation: PropTypes.object.isRequired
 };
 
