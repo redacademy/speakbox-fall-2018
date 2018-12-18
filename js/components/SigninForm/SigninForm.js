@@ -5,6 +5,9 @@ import { Form, Field } from 'react-final-form'
 import styles from './styles'
 
 export default class SigninForm extends Component {
+  constructor(props) {
+    super(props)
+  }
   callingAPI = async values => {
     const res = await getAPI('/auth/login', {
       method: 'POST',
@@ -25,9 +28,13 @@ export default class SigninForm extends Component {
     return errors
   }
   render() {
+    const { navigation } = this.props
     return (
       <Form
-        onSubmit={values => this.onSubmit(values)}
+        onSubmit={values => {
+          this.onSubmit(values)
+          navigation.navigate('App')
+        }}
         validate={values => this.validate(values)}
         render={({ handleSubmit, pristine, invalid }) => (
           <View style={styles.formContainer}>
@@ -66,14 +73,30 @@ export default class SigninForm extends Component {
               </View>
             </View>
             <View style={styles.linkButtonContainer}>
-              <Text style={styles.forgotPassword}>Forgot Password?</Text>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('ForgotPassword')
+                }}
+              >
+                <Text style={styles.forgotPassword}>Forgot Password?</Text>
+              </TouchableOpacity>
+
               <TouchableOpacity
                 style={styles.button}
                 onPress={() => handleSubmit()}
               >
-                <Text style={styles.buttonText}>SIGN IN</Text>
+                <Text style={styles.buttonText}>Sign In</Text>
               </TouchableOpacity>
-              <Text style={styles.createAccount}>Create Account</Text>
+
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('Signup')
+                }}
+              >
+                <Text style={styles.createAccount}>Create Account</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}

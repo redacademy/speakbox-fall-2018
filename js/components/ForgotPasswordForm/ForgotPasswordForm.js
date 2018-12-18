@@ -5,6 +5,9 @@ import { Form, Field } from 'react-final-form'
 import styles from './styles'
 
 export default class ForgotPasswordForm extends Component {
+  constructor(props) {
+    super(props)
+  }
   callingAPI = async values => {
     const res = await getAPI('/auth/password/forgot', {
       method: 'POST',
@@ -25,6 +28,7 @@ export default class ForgotPasswordForm extends Component {
     return errors
   }
   render() {
+    const { navigation } = this.props
     return (
       <Form
         onSubmit={values => this.onSubmit(values)}
@@ -56,11 +60,20 @@ export default class ForgotPasswordForm extends Component {
             <View style={styles.linkButtonContainer}>
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => handleSubmit()}
+                onPress={() => {
+                  navigation.navigate('ForgotPasswordConfirmation')
+                }}
               >
                 <Text style={styles.buttonText}>Submit</Text>
               </TouchableOpacity>
-              <Text style={styles.backToLogin}>Back to login</Text>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('Signin')
+                }}
+              >
+                <Text style={styles.backToLogin}>Back to login</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}

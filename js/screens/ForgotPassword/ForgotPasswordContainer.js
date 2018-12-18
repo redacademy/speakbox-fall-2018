@@ -3,6 +3,6 @@ import ForgotPassword from './ForgotPassword'
 
 export default class ForgotPasswordContainer extends Component {
   render() {
-    return <ForgotPassword />
+    return <ForgotPassword navigation={this.props.navigation} />
   }
 }

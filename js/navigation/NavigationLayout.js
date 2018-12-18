@@ -1,22 +1,44 @@
-import React from "react";
-import ActivityScreen from "../screens/Activity";
-import CommunityScreen from "../screens/Community";
-import JournalScreen from "../screens/Journal";
-import DashBoardScreen from "../screens/Dashboard";
-import ActivityDetailsScreen from "../screens/ActivityDetails";
-import ActivityCompleteScreen from "../screens/ActivityComplete";
-import ProfileScreen from "../screens/Profile";
-import EditProfileScreen from "../screens/EditProfile";
-import CommunityCategoryScreen from "../screens/CommunityCategory";
-import CommunityQuestionScreen from "../screens/CommunityQuestion";
-import CommunityTopicScreen from "../screens/CommunityTopic";
-import { sharedNavigationOptions } from "./config";
+import React from 'react'
+import ActivityScreen from '../screens/Activity'
+import CommunityScreen from '../screens/Community'
+import JournalScreen from '../screens/Journal'
+import DashboardScreen from '../screens/Dashboard'
+import ActivityDetailsScreen from '../screens/ActivityDetails'
+import ActivityCompleteScreen from '../screens/ActivityComplete'
+import ProfileScreen from '../screens/Profile'
+import EditProfileScreen from '../screens/EditProfile'
+import CommunityCategoryScreen from '../screens/CommunityCategory'
+import CommunityQuestionScreen from '../screens/CommunityQuestion'
+import CommunityTopicScreen from '../screens/CommunityTopic'
+import AccountScreen from '../screens/Account'
+import SigninScreen from '../screens/UserSignin'
+import SignupScreen from '../screens/UserSignup'
+import ForgotPasswordScreen from '../screens/ForgotPassword'
+import ForgotPasswordConfirmationScreen from '../screens/ForgotPasswordConfirmation'
+import { sharedNavigationOptions } from './config'
 import {
   createStackNavigator,
   createBottomTabNavigator
-} from "react-navigation";
-import { Image } from "react-native";
-import styles from "./styles";
+} from 'react-navigation'
+import { Image } from 'react-native'
+import styles from './styles'
+
+export const AuthStack = createStackNavigator(
+  {
+    Signin: SigninScreen,
+    Signup: SignupScreen,
+    ForgotPassword: ForgotPasswordScreen,
+    ForgotPasswordConfirmation: ForgotPasswordConfirmationScreen
+  },
+  {
+    headerMode: 'none'
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+)
 
 const ProfileStack = createStackNavigator(
   {
@@ -28,7 +50,7 @@ const ProfileStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
+)
 const EditProfileStack = createStackNavigator(
   {
     EditProfile: EditProfileScreen
@@ -38,7 +60,7 @@ const EditProfileStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
+)
 const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen,
@@ -52,7 +74,7 @@ const ActivityStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
+)
 const CommunityStack = createStackNavigator(
   {
     Community: CommunityScreen,
@@ -68,7 +90,7 @@ const CommunityStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
+)
 const JournalStack = createStackNavigator(
   {
     Journal: JournalScreen,
@@ -80,10 +102,10 @@ const JournalStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
-const DashBoardStack = createStackNavigator(
+)
+const DashboardStack = createStackNavigator(
   {
-    DashBoard: DashBoardScreen,
+    Dashboard: DashboardScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },
@@ -92,11 +114,11 @@ const DashBoardStack = createStackNavigator(
       ...sharedNavigationOptions(navigation)
     })
   }
-);
+)
 
 export default createBottomTabNavigator(
   {
-    DashBoard: DashBoardStack,
+    Dashboard: DashboardStack,
 
     Journal: JournalStack,
 
@@ -107,29 +129,29 @@ export default createBottomTabNavigator(
   {
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
-        let image;
-        if (routeName === "Activity") {
-          image = require("../assets/Icons/basketball-ball.png");
-        } else if (routeName === "Community") {
-          image = require("../assets/Icons/user-friends.png");
-        } else if (routeName === "Journal") {
-          image = require("../assets/Icons/book-open.png");
-        } else if (routeName === "DashBoard") {
-          image = require("../assets/Icons/analytics.png");
+        const { routeName } = navigation.state
+        let image
+        if (routeName === 'Activity') {
+          image = require('../assets/Icons/basketball-ball.png')
+        } else if (routeName === 'Community') {
+          image = require('../assets/Icons/user-friends.png')
+        } else if (routeName === 'Journal') {
+          image = require('../assets/Icons/book-open.png')
+        } else if (routeName === 'Dashboard') {
+          image = require('../assets/Icons/analytics.png')
         }
-        return <Image style={styles.navIcons} source={image} />;
+        return <Image style={styles.navIcons} source={image} />
       }
     }),
     tabBarOptions: {
-      activeBackgroundColor: "#efefef",
+      activeBackgroundColor: '#efefef',
       showLabel: false,
       labelStyle: {
         fontSize: 10
       },
       style: {
-        backgroundColor: "#fff"
+        backgroundColor: '#fff'
       }
     }
   }
-);
+)
