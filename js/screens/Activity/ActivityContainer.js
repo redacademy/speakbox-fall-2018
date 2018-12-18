@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Activity from "./Activity";
 import { apiPromise } from "../../lib/API/";
+import globalStyles from "../../config/styles";
 
 export default class ActivityContainer extends Component {
   constructor(props) {
@@ -10,7 +11,10 @@ export default class ActivityContainer extends Component {
     };
   }
   static navigationOptions = {
-    title: "Activity"
+    title: "Activity",
+    headerStyle: {
+      ...globalStyles.navigationHeaderWhite
+    }
   };
 
   getActivities = async () => {

@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get("window");
 
 const globalStyles = {
   titleFont: {
@@ -9,20 +9,20 @@ const globalStyles = {
   },
 
   titleFontLoginForgotPassword: {
-    color: '#5D5D5D',
-    alignSelf: 'center',
+    color: "#5D5D5D",
+    alignSelf: "center",
     fontSize: 40,
-    fontFamily: 'Quicksand',
+    fontFamily: "Quicksand",
     height: height / 2
   },
   logoImageLoginForgotPassword: {
     height: height / 5,
     width: width / 4,
-    alignSelf: 'center',
-    resizeMode: 'center'
+    alignSelf: "center",
+    resizeMode: "center"
   },
   logoContainerLoginForgotPassword: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     height: height / 8,
     marginTop: 20
   },
@@ -39,7 +39,7 @@ const globalStyles = {
   },
 
   greyTextColor: { color: "#5D5D5D" },
-  lightGreyTextColor: { color: '#B5ADAD' },
+  lightGreyTextColor: { color: "#B5ADAD" },
   blueGradientColor: { start: { color: "#A4E8FF" }, end: { color: "#6BCCFD" } },
   pinkGradientColor: { start: { color: "#FDCCC8" }, end: { color: "#FFB5BA" } },
 
@@ -56,29 +56,33 @@ const globalStyles = {
     backgroundColor: "#bbded6",
     borderBottomColor: "transparent"
   },
+  navigationHeaderWhite: {
+    backgroundColor: "#fff",
+    borderBottomColor: "transparent"
+  },
   navigationTitle: {
     color: "#fff"
   },
 
   inputElements: {
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
     borderWidth: 1,
     borderRadius: 3,
     width: width / 1.1,
     padding: 12
   },
   inputBorderShadow: {
-    borderColor: '#FFFF',
+    borderColor: "#FFFF",
     shadowOpacity: 0.75,
     shadowRadius: 5,
-    shadowColor: '#B5ADAD',
+    shadowColor: "#B5ADAD",
     shadowOffset: { height: 1, width: 1 }
   },
   linksLoginForgotPassword: {
-    color: '#B5ADAD',
-    alignSelf: 'center',
-    textDecorationLine: 'underline',
-    fontFamily: 'Avenir'
+    color: "#B5ADAD",
+    alignSelf: "center",
+    textDecorationLine: "underline",
+    fontFamily: "Avenir"
   },
   buttonElements: {
     borderRadius: 30,
@@ -86,11 +90,11 @@ const globalStyles = {
     padding: 12
   },
   buttonText: {
-    color: '#FFFF',
-    alignSelf: 'center',
-    fontFamily: 'Quicksand',
-    fontWeight: 'bold',
-    textTransform: 'uppercase'
+    color: "#FFFF",
+    alignSelf: "center",
+    fontFamily: "Quicksand",
+    fontWeight: "bold",
+    textTransform: "uppercase"
   }
 };
 
