@@ -12,6 +12,7 @@ import EditProfileScreen from "../screens/EditProfile";
 import CommunityCategoryScreen from "../screens/CommunityCategory";
 import CommunityQuestionScreen from "../screens/CommunityQuestion";
 import CommunityTopicScreen from "../screens/CommunityTopic";
+import OnBoardingScreen from '../screens/OnBoarding'
 import { sharedNavigationOptions } from "./config";
 import {
   createStackNavigator,

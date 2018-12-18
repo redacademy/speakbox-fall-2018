@@ -1,163 +1,198 @@
-import React from 'react'
-import { Text, View, Image, ImageBackground } from 'react-native'
-import Onboarding from 'react-native-onboarding-swiper'
+import React, { Component } from 'react'
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  TextInput
+} from 'react-native'
+import OnBoardingSwiper from './../../components/OnBoardingSwiper'
+import SetAReminder from './../../components/SetAReminder'
+import { Form, Field } from 'react-final-form'
 import styles from './styles'
-import NameYourPlantForm from './../../components/NameYourPlantForm'
-import PlantCareInstructions from './../../components/PlantCareInstructions'
 
-const StaticPage = props => {
-  return (
-    <View style={styles.contentContainer}>
-      <View style={styles.imageHeaderContainer}>
-        <Text style={styles.titleText}>{props.title}</Text>
-        <Image
-          source={require('./../../assets/Icons/onboarding-logo.png')}
-          style={styles.staticPageImage}
-        />
-      </View>
-      <Text style={styles.subtitleText}>{props.subtitle}</Text>
-    </View>
-  )
-}
+export default class OnBoarding extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-// const Subtitle = props => {
-//   return <Text style={styles.subtitleText}>{props.subtitle}</Text>
-// }
-
-const PlantForm = props => {
-  return (
-    <View>
-      <Text style={styles.titleText}>{props.title}</Text>
-      <Image
-        source={require('./../../assets/Flowers/babyFlower.png')}
-        style={styles.staticPageImage}
-      />
-      <NameYourPlantForm />
-    </View>
-  )
-}
-
-const Dots = ({ selected }) => {
-  let backgroundColor = 'white'
-  backgroundColor = selected ? '#FFB5BA' : '#D8D8D8'
-  return (
-    <View
-      style={{
-        width: 12,
-        height: 12,
-        marginHorizontal: 3,
-        backgroundColor: backgroundColor,
-        borderColor: 'white',
-        borderWidth: 1,
-        borderRadius: 9,
-        marginBottom: 20
-      }}
-    />
-  )
-}
-
-const OnBoarding = () => {
-  const Pages = [
-    {
-      subtitle: (
-        <StaticPage
-          title={'Welcome to Speakbox'}
-          subtitle={
-            'Live healthier, anywhere. Improve your mental well-being by forming daily habits of journaling and mood check-ins. Find and record activities to see what activities best elevate your mental well-being.'
-          }
-        />
-      ),
-      backgroundColor: '#FFFFFF'
-      // subtitle: (
-      //   <Subtitle
-      //     subtitle={
-      //       'Live healthier, anywhere. Improve your mental well-being by forming daily habits of journaling and mood check-ins. Find and record activities to see what activities best elevate your mental well-being.'
-      //     }
-      //   />
-      // )
-    },
-    {
-      backgroundColor: '#FFFFFF',
-      subtitle: (
-        <StaticPage
-          title={'Connect with Others'}
-          subtitle={
-            "Utilize our community forum to read and post questions on mental, physical, and social health. Get support from caring people who've shared similar experiences."
-          }
-        />
-      )
+  onSubmit = values => {
+    this.callingAPI(values)
+  }
+  validate = values => {
+    const errors = {}
+    if (!values.email) {
+      errors.email = 'Required'
     }
-    // {
-    //   backgroundColor: '#FFFFFF',
-    //   subtitle: <PlantForm title={'Name Your Plant'} />
-    // }
-  ]
+    if (!values.password) {
+      errors.password = 'Required'
+    }
+    return errors
+  }
 
-  return (
-    <ImageBackground
-      source={require('./../../assets/Background/background-3.png')}
-      style={{ width: '100%', height: '100%' }}
-    >
-      <View style={styles.container}>
-        <View style={styles.onboardingContainer}>
-          <Onboarding
-            bottomBarHighlight={false}
-            pages={Pages}
-            showSkip={false}
-            showNext={false}
-            // onDone={() => {
-            //   navigation.navigate('Listings')
-            // }}
-            // imageContainerStyles={styles.onboardingContainer}
-            DotComponent={Dots}
-          />
-        </View>
-      </View>
-    </ImageBackground>
-  )
+  render() {
+    console.log(this.props)
+    const { navigation } = this.props
+    console.log(this.props)
+    return (
+      <OnBoardingSwiper>
+        <ImageBackground
+          source={require('../../assets/Background/background-3.png')}
+          style={styles.background}
+        >
+          <View style={styles.container}>
+            <View style={styles.slide}>
+              <Text style={styles.header}>Welcome to Speakbox</Text>
+
+              <Image
+                style={styles.logoImage}
+                source={require('../../assets/Icons/speakbox-logo-final.png')}
+              />
+              <Text style={styles.text}>
+                Live healthier, anywhere. Improve your mental well-being by
+                forming daily habits of journaling and mood check-ins. Find and
+                record activities to see what activities best elevate your
+                mental well-being.
+              </Text>
+            </View>
+          </View>
+        </ImageBackground>
+
+        <ImageBackground
+          source={require('../../assets/Background/background-3.png')}
+          style={styles.background}
+        >
+          <View style={styles.container}>
+            <View style={styles.slide}>
+              <Text style={styles.header}>Connect with Others</Text>
+              <Image
+                style={styles.logoImage}
+                source={require('../../assets/Icons/speakbox-logo-final.png')}
+              />
+              <Text style={styles.text}>
+                You’re not alone, check out your community forum to read and
+                post questions on mental, physical, and social health. Get
+                support from caring people who've shared similar experiences.
+              </Text>
+            </View>
+          </View>
+        </ImageBackground>
+
+        <ImageBackground
+          source={require('../../assets/Background/background-3.png')}
+          style={styles.background}
+        >
+          <View style={styles.container}>
+            <View style={styles.slide}>
+              <Text style={styles.plantHeader}>Name Your Plant</Text>
+
+              <Image
+                style={styles.plantImage}
+                source={require('../../assets/Flowers/babyFlower.png')}
+              />
+              <Text style={styles.text}>
+                Here’s your very own plant to nurture and grow! We’ll explain
+                how to take care of it. But first, let’s give it a name.
+              </Text>
+              <Text style={styles.plantText}>Name your plant:</Text>
+              <Form
+                onSubmit={values => this.onSubmit(values)}
+                validate={values => this.validate(values)}
+                render={({ handleSubmit, pristine, invalid }) => (
+                  <View style={styles.formContainer}>
+                    <Field
+                      name='name'
+                      render={({ input, meta }) => {
+                        return (
+                          <TextInput
+                            {...input}
+                            placeholder='Name'
+                            autoCorrect={false}
+                            invalid={meta.touched && meta.error}
+                            style={styles.plantInput}
+                          />
+                        )
+                      }}
+                    />
+                    <TouchableOpacity style={styles.button}>
+                      <Text style={styles.buttonText}>Submit</Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
+              />
+            </View>
+          </View>
+        </ImageBackground>
+
+        <ImageBackground
+          source={require('../../assets/Background/background-3.png')}
+          style={styles.background}
+        >
+          <View style={styles.container}>
+            <View style={styles.slide}>
+              <Text style={styles.plantHeader}>Care for Your Plant</Text>
+
+              <Text style={styles.textInstructions}>
+                Like a plant, your well-being takes time to grow. Water your
+                plant as you nourish your mind, complete consecutive daily
+                journal entries. For PLANTNAME to reach full bloom, you will
+                need a 20-day streak!
+              </Text>
+
+              <View style={styles.instructionsContainer}>
+                <Text style={styles.textInstructionsContainer}>
+                  5 DAYS: 25%
+                </Text>
+                <Text style={styles.textInstructionsContainer}>
+                  10 DAYS: 50%
+                </Text>
+                <Text style={styles.textInstructionsContainer}>
+                  15 DAYS: 75%
+                </Text>
+                <Text style={styles.textInstructionsContainer}>
+                  20 DAYS: 100%
+                </Text>
+              </View>
+            </View>
+          </View>
+        </ImageBackground>
+
+        <ImageBackground
+          source={require('../../assets/Background/background-3.png')}
+          style={styles.background}
+        >
+          <View style={styles.container}>
+            <View style={styles.slide}>
+              <Text style={styles.plantHeader}>Set a Reminder</Text>
+              <Text style={styles.textInstructions}>
+                On average, habits take 66 days to form. To help keep you on
+                track, set a daily reminder notification. You can turn this off
+                at anytime.
+              </Text>
+
+              <TouchableOpacity
+                style={styles.button}
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('App')
+                }}
+              >
+                <Text style={styles.buttonText}>Set Reminder</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('App')
+                }}
+              >
+                <Text style={styles.skipText}>Skip</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </ImageBackground>
+      </OnBoardingSwiper>
+    )
+  }
 }
-
-export default OnBoarding
-
-
-
-
-
-// import React, { Component } from 'react';
-// import { Text, View, Image, ImageBackground } from 'react-native'
-
-// export default class OnBoarding extends Component {
-//   render() {
-//     return (
-//       <View style={[styles.slide, { backgroundColor: '#C04DEE' }]}>
-//         <Text style={styles.header}>EAT</Text>
-//         <Text style={styles.text}>Good nutrition is an important part of leading a healthy lifestyle</Text>
-//       </View>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   // Slide styles
-//   slide: {
-//     flex: 1,                    // Take up all screen
-//     justifyContent: 'center',   // Center vertically
-//     alignItems: 'center',       // Center horizontally
-//   },
-//   // Header styles
-//   header: {
-//     color: '#FFFFFF',
-//     fontFamily: 'Avenir',
-//     fontSize: 30,
-//     fontWeight: 'bold',
-//     marginVertical: 15,
-//   },
-//   // Text below header
-//   text: {
-//     color: '#FFFFFF',
-//     fontFamily: 'Avenir',
-//     fontSize: 18,
-//     marginHorizontal: 40,
-//     textAlign: 'center',
-//   },
-// });
