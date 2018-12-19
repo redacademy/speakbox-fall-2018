@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, ImageBackground } from "react-native";
+import { Text, View, ImageBackground, TouchableOpacity, StyleSheet } from "react-native";
 import Graph from "../../components/Graph";
 import styles from "./styles";
 import globalStyles from "../../config/styles";

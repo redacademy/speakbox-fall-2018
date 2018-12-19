@@ -93,6 +93,11 @@ const styles = StyleSheet.create({
     fontSize: globalStyles.textFont.fontSize,
     color: globalStyles.greyTextColor.color,
     textTransform: "uppercase"
+  },
+  gradient: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 20
   }
 });
 

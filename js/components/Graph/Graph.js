@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import PropTypes from "prop-types";
 import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
@@ -162,11 +161,7 @@ export default class Graph extends Component {
                     ]}
                     style={[
                       StyleSheet.absoluteFill,
-                      {
-                        height: "100%",
-                        width: "100%",
-                        borderRadius: 20
-                      }
+                      styles.gradient
                     ]}
                   />
                 )}
@@ -195,11 +190,7 @@ export default class Graph extends Component {
                     ]}
                     style={[
                       StyleSheet.absoluteFill,
-                      {
-                        height: "100%",
-                        width: "100%",
-                        borderRadius: 20
-                      }
+                      styles.gradient
                     ]}
                   />
                 )}
