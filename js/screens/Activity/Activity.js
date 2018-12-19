@@ -7,8 +7,8 @@ import {
   ImageBackground,
   TouchableOpacity
 } from "react-native";
-import styles from "./styles";
 import PropTypes from "prop-types";
+import styles from "./styles";
 
 const Activity = props => {
   return (

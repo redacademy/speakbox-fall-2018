@@ -3,6 +3,7 @@ import ActivityDetails from "./ActivityDetails";
 import globalStyles from "../../config/styles";
 import { apiPromise } from "../../lib/API/";
 
+
 export default class ActivityContainer extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,7 @@ export default class ActivityContainer extends Component {
       ...globalStyles.navigationHeader
     }
   };
+
   toggleVisibility = () => {
     this.setState({ isVisible: !this.state.isVisible });
   };
