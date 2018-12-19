@@ -2,6 +2,7 @@ import React from "react";
 import ActivityScreen from "../screens/Activity";
 import CommunityScreen from "../screens/Community";
 import JournalScreen from "../screens/Journal";
+import JournalEntryScreen from "../screens/JournalEntry";
 import DashBoardScreen from "../screens/Dashboard";
 import ActivityDetailsScreen from "../screens/ActivityDetails";
 import ActivityCompleteScreen from "../screens/ActivityComplete";
@@ -72,6 +73,7 @@ const CommunityStack = createStackNavigator(
 const JournalStack = createStackNavigator(
   {
     Journal: JournalScreen,
+    JournalEntry: JournalEntryScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },

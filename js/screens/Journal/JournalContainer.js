@@ -6,7 +6,7 @@ export default class JournalContainer extends Component {
   render() {
     return (
       <View>
-        <Journal />
+        <Journal navigation={this.props.navigation} />
       </View>
     );
   }
