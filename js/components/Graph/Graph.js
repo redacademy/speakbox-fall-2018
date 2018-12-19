@@ -1,11 +1,6 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-} from "react-native";
+import { Text, View, TouchableOpacity, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
 import styles from "./styles";
