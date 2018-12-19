@@ -1,40 +1,45 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text, View, Dimensions, ImageBackground } from "react-native";
-import { BarChart } from "react-native-chart-kit";
+import {
+  Text,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+  StyleSheet
+} from "react-native";
 import styles from "./styles";
+import globalStyles from "../../config/styles";
+import LinearGradient from "react-native-linear-gradient";
 
-const data = {
-  labels: ["January", "February", "March", "April", "May", "June"],
-  datasets: [
-    {
-      data: [20, 45, 28, 80, 99, 43]
-    }
-  ]
-};
-const chartConfig = {
-  backgroundGradientFrom: "#1E2923",
-  backgroundGradientTo: "#08130D",
-  color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`
-};
-const Dashboard = () => {
+const Dashboard = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../../assets/Background/background-1.png")}
-      style={{ width: "100%", height: "100%" }}
+      style={styles.backgroundImage}
     >
       <View style={styles.dashContainer}>
         <Text style={styles.dashTitle}>Emotional Graph</Text>
-        {/* <BarChart
-        style={styles.barGraph}
-        data={data}
-        chartConfig={chartConfig}
-      /> */}
+        <TouchableOpacity
+          activeOpacity={0.6}
+          style={styles.checkinButton}
+          onPress={() => {
+            navigation.navigate("Checkin");
+          }}
+        >
+          <LinearGradient
+            start={{ x: 0, y: 0 }}
+            end={{ x: 0, y: 1 }}
+            colors={[
+              globalStyles.pinkGradientColor.start.color,
+              globalStyles.pinkGradientColor.end.color
+            ]}
+            style={[StyleSheet.absoluteFill, styles.gradient]}
+          />
+          <Text style={styles.checkin}>Checkin</Text>
+        </TouchableOpacity>
       </View>
     </ImageBackground>
   );
 };
-
-Dashboard.propTypes = {};
 
 export default Dashboard;

@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     fontSize: globalStyles.titleFont.fontSize,
     ...globalStyles.greyTextColor,
     letterSpacing: globalStyles.titleFont.letterSpacing,
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    textAlign: "center"
   },
   avatarContainer: {
     flexWrap: "wrap",
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
   cameraIcon: {
     resizeMode: "contain",
     width: width / 12,
-    height: height/ 25,
+    height: height / 25,
     position: "absolute",
     bottom: 0,
     right: 0,

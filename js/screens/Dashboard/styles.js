@@ -3,7 +3,11 @@ import globalStyles from "../../config/styles";
 const { height, width } = Dimensions.get("window");
 
 export default (style = StyleSheet.create({
- dashContainer: {
+  backgroundImage: {
+    width: "100%",
+    height: "100%"
+  },
+  dashContainer: {
     height,
     width,
     alignItems: "center",
@@ -14,10 +18,29 @@ export default (style = StyleSheet.create({
     fontSize: globalStyles.titleFont.fontSize,
     ...globalStyles.greyTextColor,
     letterSpacing: globalStyles.titleFont.letterSpacing,
-    textTransform: 'uppercase',
+    textTransform: "uppercase"
   },
   barGraph: {
     width,
-    height: height / 2,
+    height: height / 2
+  },
+  checkinButton: {
+    fontFamily: globalStyles.textFont.fontFamily,
+    fontSize: globalStyles.textFont.fontSize,
+    height: height / 20,
+    width: width / 2.5,
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  checkin: {
+    fontFamily: globalStyles.textFont.fontFamily,
+    fontSize: globalStyles.textFont.fontSize,
+    color: "white",
+    textTransform: "uppercase"
+  },
+  gradient: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 20
   }
 }));

@@ -4,6 +4,7 @@ import CommunityScreen from "../screens/Community";
 import JournalScreen from "../screens/Journal";
 import JournalEntryScreen from "../screens/JournalEntry";
 import DashBoardScreen from "../screens/Dashboard";
+import CheckinScreen from "../screens/Checkin";
 import ActivityDetailsScreen from "../screens/ActivityDetails";
 import ActivityCompleteScreen from "../screens/ActivityComplete";
 import ProfileScreen from "../screens/Profile";
@@ -19,27 +20,6 @@ import {
 import { Image } from "react-native";
 import styles from "./styles";
 
-const ProfileStack = createStackNavigator(
-  {
-    Profile: ProfileScreen,
-    EditProfile: EditProfileScreen
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation)
-    })
-  }
-);
-const EditProfileStack = createStackNavigator(
-  {
-    EditProfile: EditProfileScreen
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation)
-    })
-  }
-);
 const ActivityStack = createStackNavigator(
   {
     Activity: ActivityScreen,
@@ -86,6 +66,7 @@ const JournalStack = createStackNavigator(
 const DashBoardStack = createStackNavigator(
   {
     DashBoard: DashBoardScreen,
+    Checkin: CheckinScreen,
     Profile: ProfileScreen,
     EditProfile: EditProfileScreen
   },

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {
   Text,
@@ -11,43 +11,62 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import globalStyles from "../../config/styles";
 import styles from "./styles";
+import Avatar from "./Avatar";
 
-const myAvatar = {
-  avatar1: require("../../assets/Avatars/beachBear.png"),
-  avatar2: require("../../assets/Avatars/blueYellowBear.png"),
-  avatar3: require("../../assets/Avatars/freshLilacBear.png"),
-  avatar4: require("../../assets/Avatars/greenBear.png"),
-  avatar5: require("../../assets/Avatars/pinkBear.png"),
-  avatar6: require("../../assets/Avatars/saffronBear.png")
-};
-
+const profileAvatars = [
+  {
+    id: 0,
+    avatar: require("../../assets/Avatars/beachBear.png"),
+    selected: false
+  },
+  {
+    id: 1,
+    avatar: require("../../assets/Avatars/blueYellowBear.png"),
+    selected: false
+  },
+  {
+    id: 2,
+    avatar: require("../../assets/Avatars/freshLilacBear.png"),
+    selected: false
+  },
+  {
+    id: 3,
+    avatar: require("../../assets/Avatars/greenBear.png"),
+    selected: false
+  },
+  {
+    id: 4,
+    avatar: require("../../assets/Avatars/pinkBear.png"),
+    selected: false
+  },
+  {
+    id: 5,
+    avatar: require("../../assets/Avatars/saffronBear.png"),
+    selected: false
+  }
+];
 export default class ChooseAvatar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       modalVisible: false,
-      currAvatar: "",
-      selectedAvatar: "avatar1",
-      avatar1: false,
-      avatar2: false,
-      avatar3: false,
-      avatar4: false,
-      avatar5: false,
-      avatar6: false
+      avatars: profileAvatars
     };
   }
   setModalVisible = visible => {
     this.setState({ modalVisible: visible });
   };
 
-  selectedAvatar = avatar => {
-    let lastAvatar = this.state.currAvatar;
-    this.setState({
-      [lastAvatar]: (this.state[lastAvatar] = false),
-      [avatar]: !this.state[avatar],
-      currAvatar: avatar
+  selectAvatar = avatar => {
+    const updatedAvatars = this.state.avatars.map(profileAvatar => {
+      if (profileAvatar.id === avatar.id) {
+        profileAvatar.selected = !profileAvatar.selected;
+      } else {
+        profileAvatar.selected = false;
+      }
+      return profileAvatar;
     });
-    console.log(this.state);
+    this.setState({ avatars: updatedAvatars });
   };
 
   render() {
@@ -73,99 +92,27 @@ export default class ChooseAvatar extends Component {
             />
             <Text style={styles.chooseAvatarTitle}>Select a new icon:</Text>
             <View style={styles.avatarContainer}>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar1 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar1");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar1 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/beachBear.png")}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar2 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar2");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar2 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/blueYellowBear.png")}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar3 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar3");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar3 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/freshLilacBear.png")}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar4 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar4");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar4 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/greenBear.png")}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar5 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar5");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar5 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/pinkBear.png")}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity
-                activeOpacity={0.6}
-                style={this.state.avatar6 && styles.touch}
-                onPress={() => {
-                  this.selectedAvatar("avatar6");
-                }}
-              >
-                <Image
-                  style={
-                    this.state.avatar6 ? styles.avatarSelected : styles.avatar
-                  }
-                  source={require("../../assets/Avatars/saffronBear.png")}
-                />
-              </TouchableOpacity>
+              {this.state.avatars.map((avatar, index) => (
+                <TouchableOpacity
+                  key={index}
+                  activeOpacity={0.6}
+                  style={avatar.selected && styles.touch}
+                  onPress={() => this.selectAvatar(avatar)}
+                >
+                  <Avatar
+                    avatar={avatar.avatar}
+                    style={
+                      avatar.selected ? styles.avatarSelected : styles.avatar
+                    }
+                  />
+                </TouchableOpacity>
+              ))}
             </View>
             <TouchableOpacity
               activeOpacity={0.6}
               style={styles.saveButton}
               onPress={() => {
                 this.setModalVisible(!this.state.modalVisible);
-                if (this.state.currAvatar !== "") {
-                  this.setState({ selectedAvatar: this.state.currAvatar });
-                }
               }}
             >
               <LinearGradient
@@ -198,7 +145,7 @@ export default class ChooseAvatar extends Component {
         >
           <Image
             style={styles.editAvatar}
-            source={myAvatar[this.state.selectedAvatar]}
+            source={require("../../assets/Avatars/beachBear.png")}
           />
           <Image
             style={styles.cameraIcon}
