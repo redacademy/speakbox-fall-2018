@@ -1,13 +1,19 @@
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import NavigationLayout from "./NavigationLayout";
+import {
+  createSwitchNavigator,
+  createAppContainer
+} from 'react-navigation'
+import createBottomTabNavigator, { AuthStack } from './NavigationLayout'
+import AuthLoadingScreen from './../screens/AuthLoading'
 
-const AppNavigator = createStackNavigator(
-  {
-    Navlayout: NavigationLayout
-  },
-  {
-    headerMode: "none"
-  }
-);
-
-export default createAppContainer(AppNavigator);
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      AuthLoading: AuthLoadingScreen,
+      App: createBottomTabNavigator,
+      Auth: AuthStack
+    },
+    {
+      initialRouteName: 'AuthLoading'
+    }
+  )
+)
