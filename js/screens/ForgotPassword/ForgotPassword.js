@@ -3,7 +3,7 @@ import { View, Text, Image, ImageBackground } from 'react-native'
 import ForgotPasswordForm from '../../components/ForgotPasswordForm'
 import styles from './styles'
 
-const ForgotPassword = () => {
+const ForgotPassword = ({ navigation }) => {
   return (
     <ImageBackground
       source={require('../../assets/Background/background.png')}
@@ -17,7 +17,7 @@ const ForgotPassword = () => {
           />
           <Text style={styles.logoHeader}>Speakbox</Text>
         </View>
-        <ForgotPasswordForm />
+        <ForgotPasswordForm navigation={navigation} />
       </View>
     </ImageBackground>
   )
