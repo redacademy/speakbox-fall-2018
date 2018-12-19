@@ -16,7 +16,8 @@ export default class ActivityContainer extends Component {
   static navigationOptions = {
     title: "Activity",
     headerStyle: {
-      ...globalStyles.navigationHeader
+      backgroundColor: "#bbded6",
+      borderBottomColor: "#bbded6"
     }
   };
 
