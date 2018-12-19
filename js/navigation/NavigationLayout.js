@@ -1,24 +1,43 @@
-import React from "react";
-import ActivityScreen from "../screens/Activity";
-import CommunityScreen from "../screens/Community";
-import JournalScreen from "../screens/Journal";
-import JournalEntryScreen from "../screens/JournalEntry";
-import DashBoardScreen from "../screens/Dashboard";
-import CheckinScreen from "../screens/Checkin";
-import ActivityDetailsScreen from "../screens/ActivityDetails";
-import ActivityCompleteScreen from "../screens/ActivityComplete";
-import ProfileScreen from "../screens/Profile";
-import EditProfileScreen from "../screens/EditProfile";
-import CommunityCategoryScreen from "../screens/CommunityCategory";
-import CommunityQuestionScreen from "../screens/CommunityQuestion";
-import CommunityTopicScreen from "../screens/CommunityTopic";
-import { sharedNavigationOptions } from "./config";
+import React from 'react'
+import ActivityScreen from '../screens/Activity'
+import CommunityScreen from '../screens/Community'
+import JournalScreen from '../screens/Journal'
+import DashBoardScreen from '../screens/Dashboard'
+import ActivityDetailsScreen from '../screens/ActivityDetails'
+import ActivityCompleteScreen from '../screens/ActivityComplete'
+import ProfileScreen from '../screens/Profile'
+import EditProfileScreen from '../screens/EditProfile'
+import CommunityCategoryScreen from '../screens/CommunityCategory'
+import CommunityQuestionScreen from '../screens/CommunityQuestion'
+import CommunityTopicScreen from '../screens/CommunityTopic'
+import SigninScreen from '../screens/UserSignin'
+import SignupScreen from '../screens/UserSignup'
+import ForgotPasswordScreen from '../screens/ForgotPassword'
+import ForgotPasswordConfirmationScreen from '../screens/ForgotPasswordConfirmation'
+import { sharedNavigationOptions } from './config'
 import {
   createStackNavigator,
   createBottomTabNavigator
-} from "react-navigation";
-import { Image } from "react-native";
-import styles from "./styles";
+} from 'react-navigation'
+import { Image } from 'react-native'
+import styles from './styles'
+
+export const AuthStack = createStackNavigator(
+  {
+    Signin: SigninScreen,
+    Signup: SignupScreen,
+    ForgotPassword: ForgotPasswordScreen,
+    ForgotPasswordConfirmation: ForgotPasswordConfirmationScreen
+  },
+  {
+    headerMode: 'none'
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+)
 
 const ActivityStack = createStackNavigator(
   {

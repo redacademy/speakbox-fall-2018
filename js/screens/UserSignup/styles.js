@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     height
   },
   signupAvatar: {
-    height: height / 2.8,
-    width: width / 4,
+    height: height / 3,
+    width: width / 3,
     alignSelf: 'center'
   }
 })
