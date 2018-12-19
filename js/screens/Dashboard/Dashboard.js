@@ -1,12 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {
-  Text,
-  View,
-  ImageBackground,
-  TouchableOpacity,
-  StyleSheet
-} from "react-native";
+import { Text, View, ImageBackground, TouchableOpacity, StyleSheet } from "react-native";
+import Graph from "../../components/Graph";
 import styles from "./styles";
 import globalStyles from "../../config/styles";
 import LinearGradient from "react-native-linear-gradient";
@@ -19,6 +13,7 @@ const Dashboard = ({ navigation }) => {
     >
       <View style={styles.dashContainer}>
         <Text style={styles.dashTitle}>Emotional Graph</Text>
+        <Graph />
         <TouchableOpacity
           activeOpacity={0.6}
           style={styles.checkinButton}

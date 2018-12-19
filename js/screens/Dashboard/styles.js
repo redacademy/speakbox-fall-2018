@@ -8,7 +8,7 @@ export default (style = StyleSheet.create({
     height: "100%"
   },
   dashContainer: {
-    height,
+    height: height / 1.5,
     width,
     alignItems: "center",
     justifyContent: "space-around"
