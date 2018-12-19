@@ -5,29 +5,31 @@ import { Form, Field } from 'react-final-form'
 import styles from './styles'
 
 export default class ForgotPasswordForm extends Component {
-  callingAPI = async values => {
+  onSubmit = async values => {
+    console.log(values)
     const res = await getAPI('/auth/password/forgot', {
       method: 'POST',
       body: JSON.stringify(values)
     })
+    return res
   }
-  onSubmit = values => {
-    this.callingAPI(values)
-  }
+
   validate = values => {
     const errors = {}
     if (!values.email) {
       errors.email = 'Required'
     }
-    if (!values.password) {
-      errors.password = 'Required'
-    }
     return errors
   }
+
   render() {
+    const { navigation } = this.props
     return (
       <Form
-        onSubmit={values => this.onSubmit(values)}
+        onSubmit={values => {
+          this.onSubmit(values)
+          navigation.navigate('ForgotPasswordConfirmation')
+        }}
         validate={values => this.validate(values)}
         render={({ handleSubmit, pristine, invalid }) => (
           <View style={styles.formContainer}>
@@ -56,11 +58,20 @@ export default class ForgotPasswordForm extends Component {
             <View style={styles.linkButtonContainer}>
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => handleSubmit()}
+                onPress={() => {
+                  handleSubmit()
+                }}
               >
                 <Text style={styles.buttonText}>Submit</Text>
               </TouchableOpacity>
-              <Text style={styles.backToLogin}>Back to login</Text>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => {
+                  navigation.navigate('Signin')
+                }}
+              >
+                <Text style={styles.backToLogin}>Back to login</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
