@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Text, View, ImageBackground } from "react-native";
 import Graph from "../../components/Graph";
 import styles from "./styles";
