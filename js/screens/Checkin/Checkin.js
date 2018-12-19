@@ -188,12 +188,7 @@ export default class Checkin extends Component {
                         ]}
                         style={[
                           StyleSheet.absoluteFill,
-                          {
-                            height: "100%",
-                            width: "100%",
-                            borderRadius: 20,
-                            padding: 20
-                          }
+                          styles.gradient
                         ]}
                       />
                       <Text style={styles.submit}>Submit</Text>
@@ -218,15 +213,10 @@ export default class Checkin extends Component {
                   ]}
                   style={[
                     StyleSheet.absoluteFill,
-                    {
-                      height: "100%",
-                      width: "100%",
-                      borderRadius: 20,
-                      padding: 20
-                    }
+                    styles.gradient
                   ]}
                 />
-                <Text style={styles.submit}>Checkin</Text>
+                <Text style={styles.submit}>Submit</Text>
               </TouchableOpacity>
             )}
           </View>

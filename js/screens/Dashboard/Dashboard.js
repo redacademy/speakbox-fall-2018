@@ -15,7 +15,7 @@ const Dashboard = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../../assets/Background/background-1.png")}
-      style={{ width: "100%", height: "100%" }}
+      style={styles.backgroundImage}
     >
       <View style={styles.dashContainer}>
         <Text style={styles.dashTitle}>Emotional Graph</Text>
@@ -33,21 +33,12 @@ const Dashboard = ({ navigation }) => {
               globalStyles.pinkGradientColor.start.color,
               globalStyles.pinkGradientColor.end.color
             ]}
-            style={[
-              StyleSheet.absoluteFill,
-              {
-                height: "100%",
-                width: "100%",
-                borderRadius: 20,
-                padding: 20
-              }
-            ]}
+            style={[StyleSheet.absoluteFill, styles.gradient]}
           />
           <Text style={styles.checkin}>Checkin</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
-    // <Checkin navigation={navigation} />
   );
 };
 

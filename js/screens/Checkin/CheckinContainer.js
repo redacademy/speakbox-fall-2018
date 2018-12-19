@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Checkin from "./Checkin";
-import { View } from "react-native";
 import globalStyles from "../../config/styles";
 
 export default class CheckinContainer extends Component {
@@ -11,11 +10,11 @@ export default class CheckinContainer extends Component {
   }
   render() {
     return (
-      <View>
+      <Fragment>
         <Checkin
         navigation={this.props.navigation}
         />
-      </View>
+      </Fragment>
     );
   }
 }

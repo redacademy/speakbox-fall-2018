@@ -6,9 +6,10 @@ import {
   queryGetUser,
   queryAddActivity,
   queryRemoveActivity,
-  queryAddJournal,
-  queryRemoveJournal,
-  queryFirstTime
+  queryAddJournalEntry,
+  queryRemoveJournalEntry,
+  queryToggleShowOnBoarding,
+  queryToggleShowPrivacyPolicy
 } from "../../config/models";
 
 const UserContext = React.createContext();
@@ -54,18 +55,23 @@ class UserProvider extends Component {
     this.getUser();
   };
 
-  addJournal = async (journalID, imageUrl, hashTags) => {
-    await queryAddJournal(journalID, imageUrl, hashTags);
+  addJournalEntry = async (journalID, imageUrl, hashTags) => {
+    await queryAddJournalEntry(journalID, imageUrl, hashTags);
     this.getUser();
   };
 
-  removeJournal = async journalID => {
-    await queryRemoveJournal(journalID);
+  removeJournalEntry = async journalID => {
+    await queryRemoveJournalEntry(journalID);
     this.getUser();
   };
 
-  firstTime = async (showOnBoarding, showPrivacyPolicy) => {
-    await queryFirstTime(showOnBoarding, showPrivacyPolicy);
+  toggleShowOnBoarding = async showOnBoarding => {
+    await queryToggleShowOnBoarding(showOnBoarding);
+    this.getUser();
+  };
+
+  toggleShowPrivacyPolicy = async showPrivacyPolicy => {
+    await queryToggleShowPrivacyPolicy(showPrivacyPolicy);
     this.getUser();
   };
 
@@ -80,9 +86,10 @@ class UserProvider extends Component {
           getUser: this.getUser,
           addActivity: this.addActivity,
           removeActivity: this.removeActivity,
-          addJournal: this.addJournal,
-          removeJournal: this.removeJournal,
-          firstTime: this.firstTime
+          addJournalEntry: this.addJournalEntry,
+          removeJournalEntry: this.removeJournalEntry,
+          toggleShowOnBoarding: this.toggleShowOnBoarding,
+          toggleShowPrivacyPolicy: this.toggleShowPrivacyPolicy
         }}
       >
         {this.props.children}

@@ -83,6 +83,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#000"
   },
+  gradient: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 20,
+  },
   submitButton: {
     marginTop: 30,
     fontFamily: globalStyles.textFont.fontFamily,

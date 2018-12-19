@@ -102,7 +102,7 @@ export const queryRemoveActivity = async activityID => {
   }
 };
 
-export const queryAddJournal = (journalID, imageUrl, hashTags, streak) => {
+export const queryAddJournalEntry = (journalID, imageUrl, hashTags, streak) => {
   try {
     let journals = user.journalEntries;
     realm.write(async () => {
@@ -121,7 +121,7 @@ export const queryAddJournal = (journalID, imageUrl, hashTags, streak) => {
   }
 };
 
-export const queryRemoveJournal = async journalID => {
+export const queryRemoveJournalEntry = async journalID => {
   try {
     await realm.delete(realm.objectForPrimaryKey("Journal", journalID));
   } catch (e) {
@@ -129,11 +129,22 @@ export const queryRemoveJournal = async journalID => {
   }
 };
 
-export const queryFirstTime = (showOnBoarding, showPrivacyPolicy) => {
+export const queryToggleShowOnBoarding = showOnBoarding => {
   try {
     realm.write(async () => {
       await realm.create("User", {
-        showOnBoarding: showOnBoarding,
+        showOnBoarding: showOnBoarding
+      });
+    });
+  } catch (e) {
+    return e;
+  }
+};
+
+export const queryToggleShowPrivacyPolicy = showPrivacyPolicy => {
+  try {
+    realm.write(async () => {
+      await realm.create("User", {
         showPrivacyPolicy: showPrivacyPolicy
       });
     });
